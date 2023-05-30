@@ -2,8 +2,8 @@
 // html just like components inside a class
 class Home {
 
-    public static function homeHeader(){
-        $homeHeader = '
+    public static function homeStart(){
+        $homeStart = '
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -15,7 +15,7 @@ class Home {
         </head>
         <body>';
 
-        return $homeHeader;
+        return $homeStart;
     }
 
     public static function homeMain(){
@@ -37,13 +37,13 @@ class Home {
     }
 
 
-    public static function homeFooter(){
-        $homeFooter = '
+    public static function homeEnd(){
+        $homeEnd = '
         </body>
         </html>
         ';
 
-        return $homeFooter;
+        return $homeEnd;
     }
 
 }
