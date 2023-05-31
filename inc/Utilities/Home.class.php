@@ -20,19 +20,18 @@ class Home {
 
     public static function homeMain(){
         $main = '
-            <section class="Home-background">
-                <article class="Home-image">
-                    
-                        <blockquote class="Home-imageInfo">
-                            <h1>
-                                Academic Wave
-                            </h1>
-                            <h3>
-                                Academic Wave is a comprehensive Learning Management System (LMS) designed for educational institutions. With Academic Wave, students can access their personalized schedules, view their enrolled courses, communicate with teachers via email, stay updated with important notices, and conveniently track their grades. On the other hand, teachers can efficiently manage their student roster, communicate with individual students via email, create and distribute notices, and easily assign and record grades for a streamlined educational experience.
-                            </h3>
-                        </blockquote>
-                </article>
-            </section>';
+            <article class="Home-image">
+                
+                    <blockquote class="Home-imageInfo">
+                        <h1>
+                            Academic Wave
+                        </h1>
+                        <h3>
+                            Academic Wave is a comprehensive Learning Management System (LMS) designed for educational institutions. With Academic Wave, students can access their personalized schedules, view their enrolled courses, communicate with teachers via email, stay updated with important notices, and conveniently track their grades. On the other hand, teachers can efficiently manage their student roster, communicate with individual students via email, create and distribute notices, and easily assign and record grades for a streamlined educational experience.
+                        </h3>
+                    </blockquote>
+            </article>
+            ';
         return $main;
     }
 
