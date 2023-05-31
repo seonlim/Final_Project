@@ -1,0 +1,6 @@
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (1, 'Zelda Feldstein', 'zfeldstein0', 'EXW2sD9HVPVL', 1, 'zfeldstein0@mozilla.org', '262-587-2394');
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (2, 'Rosalind Bletso', 'rbletso1', 'euQUsrm', 2, 'rbletso1@scientificamerican.com', '612-749-5497');
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (3, 'Richard Sambath', 'rsambath2', 'LPwEM52oU5', 3, 'rsambath2@redcross.org', '489-476-8713');
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (4, 'Goldy Borthe', 'gborthe3', 'Y7699ZKi2cT', 4, 'gborthe3@51.la', '216-930-9196');
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (5, 'Orran Stoaks', 'ostoaks4', '5NY5CxFYsz0T', 5, 'ostoaks4@livejournal.com', '852-901-1028');
+insert into teacher (teacherId, teacherName, teacherUserName, teacherPassword, courseId, teacherEmail, teacherPhoneNumber) values (6, 'Aldridge Wennington', 'awennington5', 'klKToQeF', 6, 'awennington5@booking.com', '729-454-8554');
