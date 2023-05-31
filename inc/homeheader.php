@@ -7,7 +7,7 @@
             <header>
                 <section class="homeHeader">
                     <article>
-                        <img src="./img/logo.png" alt="logo">
+                        <img src="./img/logo.jpeg" alt="logo">
                     </article>
                     <section>
                         <a href="#">
