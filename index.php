@@ -1,13 +1,12 @@
 <?php
 
 require_once("./inc/title.php");
-echo Title::htmlTitle("Home page");
-
-// require_once("./inc/homeheader.php");
-// echo HomeHeader::homeBanner();
+require_once("./inc/Utilities/Home.class.php");
 require_once("./inc/userheader.php");
-echo UserHeader::userBanner("Lim");
-
 require_once("./inc/footer.php");
+
+echo Title::htmlTitle("Home page");
+echo UserHeader::userBanner("Lim");
+echo Home::homeMain();
 echo Footer::pageFooter();
 echo Footer::pageEnd();
