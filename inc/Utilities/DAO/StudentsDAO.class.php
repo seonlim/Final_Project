@@ -44,7 +44,7 @@ class StudentsDAO{
 
         self::$db->execute();
 
-        return self::$db->lastInsertId();
+        return self::$db->lastInsertedId();
     }
     
     public static function updateStudentById( Students $student){

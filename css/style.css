@@ -26,7 +26,8 @@ form{
 
 form > section{
     display: flex;
-    column-gap: 3vw;
+    flex-direction: column;
+    row-gap: 3vh;
 }
 
 .inputs{
@@ -37,14 +38,17 @@ form > section{
 
 input{
     padding: 3%;
-    width: 100%;
+    width: 320px;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid black;
 }
 
 .btnSubmit{
-    width: 365px;
+    width: 345px;
     padding: 3%;
     font-size: 14px;
-    border: 1px solid #96D2CD;
+    border: 1px solid #5485AE;
     background-color: #5485AE;
     color: white;
     border-radius: 15px;
@@ -53,7 +57,7 @@ input{
 
 .btnSubmit:hover{
     cursor: pointer;
-    background-color: #96D2CD;
+    background-color: #5485AE;
     border: 1px solid black;
     color: black;
     
