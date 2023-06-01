@@ -11,52 +11,52 @@ class Students{
     private string $stuCountry;
     
     public function getStudentId(){
-        return $this->studentId;
+        return $this->stuId;
     }
-    public function setStudentId(int $studentId){
-        $this->studentId = $studentId;
+    public function setStudentId(int $stuId){
+        $this->stuId = $stuId;
     }
     public function getStudentName(){
-        return $this->studentName;
+        return $this->stuName;
     }
-    public function setStudentName(string $studentName){
-        $this->studentName = $studentName;
+    public function setStudentName(string $stuName){
+        $this->stuName = $stuName;
     }
     public function getStudentAge(){
-        return $this->studentAge;
+        return $this->stuAge;
     }
-    public function setStudentAge(int $studentAge){
-        $this->studentAge = $studentAge;
+    public function setStudentAge(int $stuAge){
+        $this->stuAge = $stuAge;
     }
     public function getStudentUserName(){
-        return $this->studentUserName;
+        return $this->stuUserName;
     }
-    public function setStudentUserName(string $studentUserName){
-        $this->studentUserName = $studentUserName;
+    public function setStudentUserName(string $stuUserName){
+        $this->stuUserName = $stuUserName;
     }
     public function getStudentPassword(){
-        return $this->studentPassword;
+        return $this->stuPassword;
     }
-    public function setStudentPassword(string $studentPassword){
-        $this->studentPassword = $studentPassword;
+    public function setStudentPassword(string $stuPassword){
+        $this->stuPassword = $stuPassword;
     }
     public function getStudentCourse(){
-        return $this->studentCourse;
+        return $this->stuCourse;
     }
-    public function setStudentCourse(string $studentCourse){
-        $this->studentCourse = $studentCourse;
+    public function setStudentCourse(string $stuCourse){
+        $this->stuCourse = $stuCourse;
     }
     public function getStudentEmail(){
-        return $this->studentEmail;
+        return $this->stuEmail;
     }
-    public function setStudentEmail(string $studentEmail){
-        $this->studentEmail = $studentEmail;
+    public function setStudentEmail(string $stuEmail){
+        $this->stuEmail = $stuEmail;
     }
     public function getStudentCountry(){
-        return $this->studentCountry;
+        return $this->stuCountry;
     }
-    public function setStudentCountry(string $studentCountry){
-        $this->studentCountry = $studentCountry;
+    public function setStudentCountry(string $stuCountry){
+        $this->stuCountry = $stuCountry;
     }
 }
 ?>

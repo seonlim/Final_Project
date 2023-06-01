@@ -34,9 +34,9 @@ class Page{
             <tbody>
             ';
             foreach($studentList as $student){
-                $studentTable .= self::stuRow($student);
+                $stuTable .= self::stuRow($student);
             }
-            $studentTable .= '
+            $stuTable .= '
             </tbody>
         </table>
         ';
@@ -50,9 +50,9 @@ class Page{
             <td>'.$student->getStudentName().'</td>
             <td>'.$student->getStudentAge().'</td>
             <td>'.$student->getStudentUserName().'</td>
-            <td>'.$student->getCourse().'</td>
-            <td>'.$student->getEmail().'</td>
-            <td>'.$student->getCountry().'</td>
+            <td>'.$student->getStudentCourse().'</td>
+            <td>'.$student->getStudentEmail().'</td>
+            <td>'.$student->getStudentCountry().'</td>
         </tr>
         ';
         return $stuRow;
