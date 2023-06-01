@@ -1,3 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
 main{
-    background-color: black;
+    display: flex;
+    column-gap: 10vh;
+    width: 97%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    /* border: 1px solid black; */
+}
+
+form > section{
+    display: flex;
+    column-gap: 3vw;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+input{
+    padding: 3%;
+    width: 100%;
+}
+
+.btnSubmit{
+    width: 365px;
+    padding: 3%;
+    font-size: 14px;
+    border: 1px solid #96D2CD;
+    background-color: #5485AE;
+    color: white;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.btnSubmit:hover{
+    cursor: pointer;
+    background-color: #96D2CD;
+    border: 1px solid black;
+    color: black;
+    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+table{
+    font-size: 13.5px;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+table th,
+table td {
+    padding: 9px 8px;
+}
+
+thead tr {
+    background-color: #5485AE;
+    color: white;
+    text-align: left;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid white;
+    transition: .2s;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: whitesmoke;
+}
+
+tbody tr:hover{
+    background-color: #96D2CD;
+    cursor: pointer;
 }

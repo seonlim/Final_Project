@@ -14,6 +14,7 @@ class Page{
             <title>Students Table</title>
         </head>
         <body>
+            <main>
         ';
         return $pageHead;
     }
@@ -62,39 +63,47 @@ class Page{
     public static function newStudentForm(){
         $newStudentForm = '
         <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
-            <spam>
-                <label for="stuId">ID</label>
-                <input type="text" name="stuId" placeholder="Student ID">
-            </spam>
-            <spam>
-                <label for="stuName">Name</label>
-                <input type="text" name="stuName" placeholder="Student Name">
-            </spam>
-            <spam>
-                <label for="stuAge">Age</label>
-                <input type="text" name="stuAge" placeholder="Student Age">
-            </spam>
-            <spam>
-                <label for="stuUserName">UserName</label>
-                <input type="text" name="stuUserName" placeholder="Student User Name">
-            </spam>
-            <spam>
-                <label for="stuPassword">Password</label>
-                <input type="text" name="stuPassword" placeholder="Student Password">
-            </spam>
-            <spam>
-                <label for="stuCourse">Course</label>
-                <input type="text" name="stuCourse" placeholder="Student Course">
-            </spam>
-            <spam>
-                <label for="stuEmail">Email</label>
-                <input type="email" name="stuEmail" placeholder="Student Email">
-            </spam>
-            <spam>
-                <label for="stuCountry">Country</label>
-                <input type="text" name="stuCountry" placeholder="Student Country">
-            </spam>
-            <input type="submit" value="Create a new Student">
+            <section>
+                <section class="inputs">
+                    <article>
+                        <label for="stuId">ID</label>
+                        <input type="text" name="stuId" placeholder="Student ID">
+                    </article>
+                    <article>
+                        <label for="stuName">Name</label>
+                        <input type="text" name="stuName" placeholder="Student Name">
+                    </article>
+                    <article>
+                        <label for="stuAge">Age</label>
+                        <input type="text" name="stuAge" placeholder="Student Age">
+                    </article>
+                    <article>
+                        <label for="stuUserName">UserName</label>
+                        <input type="text" name="stuUserName" placeholder="Student User Name">
+                    </article>
+                </section>
+                <section class="inputs">
+                    <article>
+                        <label for="stuPassword">Password</label>
+                        <input type="text" name="stuPassword" placeholder="Student Password">
+                    </article>
+                    <article>
+                        <label for="stuCourse">Course</label>
+                        <input type="text" name="stuCourse" placeholder="Student Course">
+                    </article>
+                    <article>
+                        <label for="stuEmail">Email</label>
+                        <input type="email" name="stuEmail" placeholder="Student Email">
+                    </article>
+                    <article>
+                        <label for="stuCountry">Country</label>
+                        <input type="text" name="stuCountry" placeholder="Student Country">
+                    </article>
+                </section>
+            </section>
+            <section>
+                <input type="submit" value="Create a new Student" class="btnSubmit">
+            </section>
         </form>
         ';
         return $newStudentForm;
@@ -111,6 +120,7 @@ class Page{
 
     public static function getPageFooter(){
         $pageFooter = '
+        </main>
             </body>
         </html>
         ';
