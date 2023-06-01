@@ -29,11 +29,12 @@ class StudentsDAO{
     }
 
     public static function insertStudents( Students $newStudent){
-        $sql = "INSERT INTO students (stuName, stuAge, stuUserName, stuPassword, stuCourse, stuEmail, stuCountry) 
-        VALUES (:stuName, :stuAge, :stuUserName, :stuPassword, :stuCourse, :stuEmail, :stuCountry)";
+        $sql = "INSERT INTO students (stuId, stuName, stuAge, stuUserName, stuPassword, stuCourse, stuEmail, stuCountry) 
+        VALUES (:stuId, :stuName, :stuAge, :stuUserName, :stuPassword, :stuCourse, :stuEmail, :stuCountry)";
 
         self::$db->query($sql);
 
+        self::$db->bind(":stuId", $newStudent->getStudentId());
         self::$db->bind(":stuName", $newStudent->getStudentName());
         self::$db->bind(":stuAge", $newStudent->getStudentAge());
         self::$db->bind(":stuUserName", $newStudent->getStudentUserName());

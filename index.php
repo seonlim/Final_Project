@@ -9,16 +9,18 @@ require_once("inc/Entities/Teacher.class.php");
 require_once("inc/Utilities/DAO/StudentsDAO.class.php");
 require_once("inc/config.inc.php");
 
-
+// starting the database connection.
 StudentsDAO::startDb();
 
+// creating the variables to get all students and a single students if necessary.
 $studentsList = StudentsDAO::getAllStudents();
 $singleStudent = StudentsDAO::getStudentByUserName("lu-corradini");
 $studentsRepository = new StudentsRepository();
 
-
+// creating the funtion to add new students to the database and the table.
 if ( ! empty($_POST)) {
     $newStudent = new Students();
+    $newStudent->setStudentId($_POST['stuId']);
     $newStudent->setStudentName($_POST['stuName']);
     $newStudent->setStudentAge($_POST['stuAge']);
     $newStudent->setStudentUserName($_POST['stuUserName']);
@@ -27,14 +29,11 @@ if ( ! empty($_POST)) {
     $newStudent->setStudentEmail($_POST['stuEmail']);
     $newStudent->setStudentCountry($_POST['stuCountry']);
 
-    // $newStudent = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    // $newStudent->setPassword($newStudent);
-
     $studentExist = StudentsDAO::getStudentByUserName($_POST['stuUserName']);
     
     if (!$studentExist) {
         StudentsDAO::insertStudents($newStudent);  
-        echo Page::successMessage();
+        // echo Page::successMessage();
         unset($_POST);
     }
 }

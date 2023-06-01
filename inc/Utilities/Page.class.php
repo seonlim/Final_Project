@@ -66,6 +66,10 @@ class Page{
             <section>
                 <section class="inputs">
                     <article>
+                    <label for="stuId">ID</label>
+                    <input type="text" name="stuId" placeholder="Student ID">
+                    </article>
+                    <article>
                         <label for="stuName">Name</label>
                         <input type="text" name="stuName" placeholder="Student Name">
                     </article>
