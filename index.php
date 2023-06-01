@@ -20,6 +20,7 @@ $studentsRepository->setStudentsList($studentsList);
 
 echo Page::getPageHead();
 echo Page::stuTable(StudentsDAO::getAllStudents());
+echo Page::newStudentForm();
 // var_dump($studentsList);
 echo Page::getPageFooter();
 ?>

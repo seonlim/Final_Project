@@ -10,6 +10,7 @@ class Page{
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./css/style.css">
             <title>Students Table</title>
         </head>
         <body>
@@ -56,6 +57,56 @@ class Page{
         </tr>
         ';
         return $stuRow;
+    }
+
+    public static function newStudentForm(){
+        $newStudentForm = '
+        <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
+            <spam>
+                <label for="stuId">ID</label>
+                <input type="text" name="stuId" placeholder="Student ID">
+            </spam>
+            <spam>
+                <label for="stuName">Name</label>
+                <input type="text" name="stuName" placeholder="Student Name">
+            </spam>
+            <spam>
+                <label for="stuAge">Age</label>
+                <input type="text" name="stuAge" placeholder="Student Age">
+            </spam>
+            <spam>
+                <label for="stuUserName">UserName</label>
+                <input type="text" name="stuUserName" placeholder="Student User Name">
+            </spam>
+            <spam>
+                <label for="stuPassword">Password</label>
+                <input type="text" name="stuPassword" placeholder="Student Password">
+            </spam>
+            <spam>
+                <label for="stuCourse">Course</label>
+                <input type="text" name="stuCourse" placeholder="Student Course">
+            </spam>
+            <spam>
+                <label for="stuEmail">Email</label>
+                <input type="email" name="stuEmail" placeholder="Student Email">
+            </spam>
+            <spam>
+                <label for="stuCountry">Country</label>
+                <input type="text" name="stuCountry" placeholder="Student Country">
+            </spam>
+            <input type="submit" value="Create a new Student">
+        </form>
+        ';
+        return $newStudentForm;
+    }
+
+    public static function successMessage() {
+        $message = '
+        <section class="message" role="alert">
+            New Student included successfully!
+        </section>
+        ';
+        return $message;
     }
 
     public static function getPageFooter(){
