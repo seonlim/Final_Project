@@ -13,7 +13,7 @@ require_once("./inc/Student_page.class.php");
 if(!empty($_POST)){
 
     // call the connection with the database
-    StudentsDAO::startDb();
+    StudentsDAO::init();
      
     $StuUserName = $_POST['usernameStu'];
     $StuPassword = $_POST['passwordStu'];
@@ -22,10 +22,12 @@ if(!empty($_POST)){
     // what is the student logged
     $nowUser = StudentsDAO::getStudentByUserName($StuUserName);
     //Check the DAO returned an object of type user
-    if( (gettype($nowUser) == "object") && (get_class($nowUser) == "Students") ){
+    if( (gettype($nowUser) === "object") && (get_class($nowUser) === "Students") ){
+        // var_dump("lucas");
+        // header("Location: welcome-test.php");
         
-        
-        if ($nowUser->checkPassword($StuPassword))  {
+        // the password needs to be hashed for checkPassword() to work
+        if ($nowUser->checkPassword($_POST['passwordStu']))  {
             // start a session 
             session_start();
 
@@ -38,9 +40,7 @@ if(!empty($_POST)){
             exit();
         }
     }
-} else {
-    echo "<p>Please fill in both username and password fields.</p>";
-}
+} 
 
 
 echo Student_Page::studentHead();

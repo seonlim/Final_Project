@@ -36,11 +36,11 @@ class Student_Page{
                             <form method="POST" action="'.$_SERVER["PHP_SELF"].'">
                                 <article>
                                     <label for="name">Your Username</label>
-                                    <input type="text" name="usernameStu" placeholder="Username">
+                                    <input type="text" name="usernameStu" id="usernameStu" placeholder="Username">
                                 </article>
                                 <article>
                                     <label for="password">Your Password</label>
-                                    <input type="password" name="passwordStu" placeholder="Password">
+                                    <input type="password" name="passwordStu" id="passwordStu" placeholder="Password">
                                 </article>
                                 <div class="submiBtn">
                                     <input class="btn" type="submit" value="Login">

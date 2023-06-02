@@ -3,8 +3,8 @@
 class StudentsDAO{
     private static $db;
 
-    public static function startDb(){
-        self::$db = new PDOService("students");
+    public static function init(){
+        self::$db = new PDOServices("students");
     }
 
     public static function getAllStudents(){

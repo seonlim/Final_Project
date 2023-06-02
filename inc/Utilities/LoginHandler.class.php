@@ -4,7 +4,7 @@ class LoginHandler{
 
     private static $login;
 
-    static function checkLogin()   {
+    public static function checkLogin()   {
         // by default is false
         self::$login = false;
 

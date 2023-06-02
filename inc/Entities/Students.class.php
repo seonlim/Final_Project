@@ -60,8 +60,15 @@ class Students{
     }
 
     function checkPassword(string $passwordCheck): bool {
+        $equal = false;
         // Return a boolean (true or false) to check if the password given is correct for the now user
-        return password_verify($passwordCheck, $this->getStudentPassword());
+        if (password_verify($passwordCheck,$this->getStudentPassword()) ) {
+            $equal = true;
+        } else {
+            $equal = false;
+        }
+
+        return $equal;
     }
 }
 ?>
