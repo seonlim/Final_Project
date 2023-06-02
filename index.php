@@ -44,6 +44,6 @@ echo Page::getPageHead();
 echo Page::stuTable(StudentsDAO::getAllStudents());
 echo Page::newStudentForm();
 // var_dump($studentsList);
-echo Page::teacherContact();
+echo Page::teacherContact(); // contact form
 echo Page::getPageFooter();
 ?>
