@@ -35,7 +35,7 @@ class Students{
         $this->studentUserName = $studentUserName;
     }
     public function getStudentPassword(){
-        return $this->studentPassword;
+        return $this->stuPassword;
     }
     public function setStudentPassword(string $studentPassword){
         $this->studentPassword = $studentPassword;
@@ -57,6 +57,11 @@ class Students{
     }
     public function setStudentCountry(string $studentCountry){
         $this->studentCountry = $studentCountry;
+    }
+
+    function checkPassword(string $passwordCheck): bool {
+        // Return a boolean (true or false) to check if the password given is correct for the now user
+        return password_verify($passwordCheck, $this->getStudentPassword());
     }
 }
 ?>
