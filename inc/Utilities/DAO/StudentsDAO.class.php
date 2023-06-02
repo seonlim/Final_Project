@@ -48,10 +48,11 @@ class StudentsDAO{
         return self::$db->lastInsertedId();
     }
     
-    public static function updateStudentById( Students $student){
+    public static function updateStudentById( Students $newStudent){
         $sql = "UPDATE students SET stuName = :stuName, stuAge = :stuAge, stuUserName = :stuUserName, stuPassword = :stuPassword, stuCourse = :stuCourse, stuEmail = :stuEmail, stuCountry = :stuCountry WHERE stuId = :stuId";
 
         self::$db->query($sql);
+        self::$db->bind(":stuId", $newStudent->getStudentId());
         self::$db->bind(":stuName", $newStudent->getStudentName());
         self::$db->bind(":stuAge", $newStudent->getStudentAge());
         self::$db->bind(":stuUserName", $newStudent->getStudentUserName());
@@ -62,7 +63,7 @@ class StudentsDAO{
 
         self::$db->execute();
 
-        return self::$db->lastInsertId();
+        return self::$db->lastInsertedId();
     }
 
     public static function deleteStudentById( $stuId){
