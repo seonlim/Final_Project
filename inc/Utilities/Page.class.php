@@ -118,6 +118,30 @@ class Page{
         return $message;
     }
 
+    public static function teacherContact(){
+        $teacherContact = '
+        <section class="teacher-contact">
+            <div class="form-contact">
+                <form action="POST">
+                    <label for="fname">Teacher Name</label>
+                    <input type="text" id="tname" name="teachername" placeholder="Your name">
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                
+                    <input type="submit" value="Submit" class="btnContact">
+                </form>
+            </div>
+        </section>
+        ';
+        return $teacherContact;
+    }
+
+
+
     public static function getPageFooter(){
         $pageFooter = '
         </main>

@@ -44,7 +44,8 @@ input{
     border: 1px solid black;
 }
 
-.btnSubmit{
+.btnSubmit,
+.btnContact{
     width: 345px;
     padding: 3%;
     font-size: 14px;
@@ -55,7 +56,8 @@ input{
     transition: .2s;
 }
 
-.btnSubmit:hover{
+.btnSubmit:hover,
+.btnContact:hover {
     cursor: pointer;
     background-color: #5485AE;
     border: 1px solid black;
@@ -99,4 +101,9 @@ tbody tr:nth-of-type(even) {
 tbody tr:hover{
     background-color: #96D2CD;
     cursor: pointer;
+}
+
+.form-contact textarea {
+    resize: none;
+    height: 300px;
 }
