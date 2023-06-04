@@ -13,10 +13,30 @@ class Student_Page{
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Student Login Page</title>
             <link rel="stylesheet" href="./css/style-1.css">
+            <link rel="stylesheet" href="./css/student-page.css">
+
         </head>
         <body>
         ';
         return $studentHead;
+    }
+
+    public static function warningPopUp() {
+        $warningPopUp = '
+        <div class="warning">  
+            Please, fill all the inputs.
+        </div>
+        ';
+        return $warningPopUp;
+    }
+
+    public static function errorPopUp() {
+        $errorPopUp = '
+        <div class="error">  
+            Username or Password incorrect
+        </div>
+        ';
+        return $errorPopUp;
     }
 
     public static function studentLogin(){

@@ -5,47 +5,52 @@ require_once("./inc/Utilities/PDOServices.class.php");
 require_once("./inc/Utilities/DAO/StudentsDAO.class.php");
 require_once("./inc/Student_page.class.php");
 
-// // check if the inputs are empty dispay an error
-// if (!empty($_POST) && (empty($_POST['usernameStu']) || empty($_POST['passwordStu']))) {
-//     echo "<p>Please fill in both username and password fields.</p>";
-// }
+$errorMessage = ''; // Variável para armazenar a mensagem de erro
 
-if(!empty($_POST)){
+$warningMessage = '';
 
-    // call the connection with the database
-    StudentsDAO::init();
-     
+
+if (!empty($_POST)) {
+
     $StuUserName = $_POST['usernameStu'];
     $StuPassword = $_POST['passwordStu'];
 
+    // if one of the inputs is empty
+    if (empty($StuUserName) || empty($StuPassword)) {
+        $warningMessage = "Username or Password incorrect";
+    } else {
+        // call the connection with the database
+        StudentsDAO::init();
 
-    // what is the student logged
-    $alreadyUser = StudentsDAO::getStudentByUserName($StuUserName);
-    //Check the DAO returned an object of type user
-    if( (gettype($alreadyUser) === "object") && (get_class($alreadyUser) === "Students") ){
-        // var_dump("lucas");
-        // header("Location: welcome-test.php");
-        var_dump($alreadyUser->checkPassword($StuPassword));
-        // the password needs to be hashed for checkPassword() to work
-        if ($alreadyUser->checkPassword($_POST['passwordStu']))  {
-            // start a session 
+        // what is the student logged
+        $alreadyUser = StudentsDAO::getStudentByUserName($StuUserName);
+
+        // Check if the DAO returned an object of type user
+        if ($alreadyUser instanceof Students && $alreadyUser->checkPassword($StuPassword)) {
+            // start a session
             session_start();
 
-            
             $_SESSION["Stulogged"] = true;
+
             // set the user typed as the now user
             $_SESSION['usernameStu'] = $alreadyUser;
 
             header("Location: welcome-test.php");
             exit();
+        } else {
+            $errorMessage = "Username or Password incorrect";
         }
     }
 } 
 
-
 echo Student_Page::studentHead();
+if (!empty($errorMessage)) {
+    echo Student_Page::errorPopUp($errorMessage);
+}
+
+if (!empty($warningMessage)) {
+    echo Student_Page::warningPopUp($warningMessage);
+}
 echo Student_Page::studentLogin();
 echo Student_Page::studentFooter();
-
-
 ?>
