@@ -59,7 +59,7 @@ CREATE TABLE `students` (
   `stuName` char(50) DEFAULT NULL,
   `stuAge` int(11) NOT NULL,
   `stuUserName` char(50) NOT NULL,
-  `stuPassword` char(50) NOT NULL,
+  `stuPassword` varchar(255) NOT NULL,
   `stuCourse` char(50) DEFAULT NULL,
   `stuEmail` char(50) DEFAULT NULL,
   `stuCountry` char(50) DEFAULT NULL

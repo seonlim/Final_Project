@@ -55,6 +55,39 @@ class Student_Page{
         return $studentLogin;
     }
 
+    public static function studentInfo(Students $nowUser){
+        $studentInfo = '
+        <section id="studentInfo">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Student Name :</th>
+                        <th> Age :</th>
+                        <th> Country :</th>
+                        <th> Username :</th>
+                        <th> Email :</th>
+                        <th> Course :</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>'.$nowUser->getStudentName().'</td>
+                        <td>'.$nowUser->getStudentAge().'</td>
+                        <td>'.$nowUser->getStudentCountry().'</td>
+                        <td>'.$nowUser->getStudentUserName().'</td>
+                        <td>'.$nowUser->getStudentEmail().'</td>
+                        <td>'.$nowUser->getStudentCourse().'</td>
+                    </tr>
+                <tbody>
+            </table>
+
+        </section>
+
+        ';
+        return $studentInfo;
+
+    }
+
     public static function studentFooter(){
         $studentFooter = '
             </body>

@@ -20,21 +20,21 @@ if(!empty($_POST)){
 
 
     // what is the student logged
-    $nowUser = StudentsDAO::getStudentByUserName($StuUserName);
+    $alreadyUser = StudentsDAO::getStudentByUserName($StuUserName);
     //Check the DAO returned an object of type user
-    if( (gettype($nowUser) === "object") && (get_class($nowUser) === "Students") ){
+    if( (gettype($alreadyUser) === "object") && (get_class($alreadyUser) === "Students") ){
         // var_dump("lucas");
         // header("Location: welcome-test.php");
-        
+        var_dump($alreadyUser->checkPassword($StuPassword));
         // the password needs to be hashed for checkPassword() to work
-        if ($nowUser->checkPassword($_POST['passwordStu']))  {
+        if ($alreadyUser->checkPassword($_POST['passwordStu']))  {
             // start a session 
             session_start();
 
             
             $_SESSION["Stulogged"] = true;
             // set the user typed as the now user
-            $_SESSION['usernameStu'] = $nowUser;
+            $_SESSION['usernameStu'] = $alreadyUser;
 
             header("Location: welcome-test.php");
             exit();
