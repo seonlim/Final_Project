@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `course` (
   `courseId` int(11) NOT NULL,
-  `courseName` float(2,1) DEFAULT NULL,
+  `courseName` char(50) DEFAULT NULL,
   `courseWork_1` float(2,1) DEFAULT NULL,
   `courseWork_2` float(2,1) DEFAULT NULL,
   `midTerm` float(2,1) DEFAULT NULL,

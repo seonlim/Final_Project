@@ -13,7 +13,7 @@ StudentsDAO::init();
 
 $nowUser = $_SESSION['usernameStu'];
 
-echo '<h1>Hello '.$nowUser->getStudentName().'</h1>';
+echo '<h1>Hello '.$nowUser->getStudentName().' !'.'</h1>';
 
 Student_Page::studentHead();
 echo Student_Page::studentInfo($nowUser);
