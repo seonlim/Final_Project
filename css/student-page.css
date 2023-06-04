@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* login alerts  */
 .warning {
   background-color: #FFFFCC;
   color: #FF9900;
@@ -18,4 +19,11 @@ background-color: #FFCCCC;
 color: #FF0000;
 border: 1px solid #FF0000;
 padding: 10px;
+}
+
+/* button for student login page */
+.student{
+  background-color: gainsboro;
+  /* background-color: #5584AC; */
+  border-right: 1px solid gray;
 }
