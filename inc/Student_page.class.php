@@ -57,35 +57,41 @@ class Student_Page{
 
     public static function studentInfo(Students $nowUser){
         $studentInfo = '
-        <section id="studentInfo">
-            <table>
-                <thead>
-                    <tr>
-                        <th> Student Name :</th>
-                        <th> Age :</th>
-                        <th> Country :</th>
-                        <th> Username :</th>
-                        <th> Email :</th>
-                        <th> Course :</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>'.$nowUser->getStudentName().'</td>
-                        <td>'.$nowUser->getStudentAge().'</td>
-                        <td>'.$nowUser->getStudentCountry().'</td>
-                        <td>'.$nowUser->getStudentUserName().'</td>
-                        <td>'.$nowUser->getStudentEmail().'</td>
-                        <td>'.$nowUser->getStudentCourse().'</td>
-                    </tr>
-                <tbody>
-            </table>
-
-        </section>
-
+            <section id="studentInfo">
+                <table>
+                    <tbody>
+                        <tr class="row">
+                            <th scope="row"> Name: </th>
+                            <td>'.$nowUser->getStudentName().'</td>
+                        </tr>
+                        <tr class="row">
+                        <th scope="row">Age: </th>
+                            <td>'.$nowUser->getStudentAge().'</td>
+                        </tr>
+                        <tr class="row">
+                            <th scope="row">Country: </th>
+                            <td>'.$nowUser->getStudentCountry().'</td>
+                        </tr>
+                        <tr class="row">
+                            <th scope="row">Username: </th>
+                            <td>'.$nowUser->getStudentUserName().'</td>
+                        </tr>
+                        <tr class="row">
+                            <th scope="row">Email: </th>
+                            <td>'.$nowUser->getStudentEmail().'</td>
+                        </tr>
+                        <tr class="row">
+                            <th scope="row">Course: </th>
+                            <td>'.$nowUser->getStudentCourse().'</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            </section>
+        
         ';
         return $studentInfo;
-
+            
     }
 
     public static function studentFooter(){
