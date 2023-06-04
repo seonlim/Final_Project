@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2023 at 05:53 AM
+-- Generation Time: Jun 04, 2023 at 03:06 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `academicwave`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE `course` (
+  `courseId` int(11) NOT NULL,
+  `courseName` float(2,1) DEFAULT NULL,
+  `courseWork_1` float(2,1) DEFAULT NULL,
+  `courseWork_2` float(2,1) DEFAULT NULL,
+  `midTerm` float(2,1) DEFAULT NULL,
+  `finalExam` float(2,1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enrollment`
+--
+
+CREATE TABLE `enrollment` (
+  `enrollmentId` int(11) NOT NULL,
+  `stuId` int(11) NOT NULL,
+  `courseId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -66,15 +93,84 @@ INSERT INTO `students` (`stuId`, `stuName`, `stuAge`, `stuUserName`, `stuPasswor
 (21, 'Leticia Guerra', 20, 'Le-Guerra', '$2y$10$wRFmUedTEHTgOpgnjL8.k.c41AiMO2sGtALwJElPXED', 'PHP', 'LeGuerra@gmail.com', 'Brazil'),
 (22, 'Pedro', 20, 'pedro_ssgarcia', '$2y$10$14PCpQOm0Gl/S.1IpRo6iOX6RwG9b8x0R7Gvrhi1qLU', 'JavaScript', 'pedro@gmai.com', 'Mineiro');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacher`
+--
+
+CREATE TABLE `teacher` (
+  `teacherId` int(11) NOT NULL,
+  `teacherName` char(50) DEFAULT NULL,
+  `teacherUserName` char(50) NOT NULL,
+  `teacherPassword` char(50) NOT NULL,
+  `courseId` int(11) NOT NULL,
+  `teacherEmail` char(50) DEFAULT NULL,
+  `teacherPhoneNumber` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `teacher`
+--
+
+INSERT INTO `teacher` (`teacherId`, `teacherName`, `teacherUserName`, `teacherPassword`, `courseId`, `teacherEmail`, `teacherPhoneNumber`) VALUES
+(1, 'Zelda Feldstein', 'zfeldstein0', 'EXW2sD9HVPVL', 1, 'zfeldstein0@mozilla.org', 262),
+(2, 'Rosalind Bletso', 'rbletso1', 'euQUsrm', 2, 'rbletso1@scientificamerican.com', 612),
+(3, 'Richard Sambath', 'rsambath2', 'LPwEM52oU5', 3, 'rsambath2@redcross.org', 489),
+(4, 'Goldy Borthe', 'gborthe3', 'Y7699ZKi2cT', 4, 'gborthe3@51.la', 216),
+(5, 'Orran Stoaks', 'ostoaks4', '5NY5CxFYsz0T', 5, 'ostoaks4@livejournal.com', 852),
+(6, 'Aldridge Wennington', 'awennington5', 'klKToQeF', 6, 'awennington5@booking.com', 729);
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`courseId`);
+
+--
+-- Indexes for table `enrollment`
+--
+ALTER TABLE `enrollment`
+  ADD PRIMARY KEY (`enrollmentId`),
+  ADD KEY `stuId` (`stuId`),
+  ADD KEY `courseId` (`courseId`);
 
 --
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`stuId`);
+
+--
+-- Indexes for table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD PRIMARY KEY (`teacherId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `enrollment`
+--
+ALTER TABLE `enrollment`
+  MODIFY `enrollmentId` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `enrollment`
+--
+ALTER TABLE `enrollment`
+  ADD CONSTRAINT `enrollment_ibfk_1` FOREIGN KEY (`stuId`) REFERENCES `students` (`stuId`),
+  ADD CONSTRAINT `enrollment_ibfk_2` FOREIGN KEY (`courseId`) REFERENCES `course` (`courseId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
