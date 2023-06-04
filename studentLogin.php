@@ -5,7 +5,7 @@ require_once("./inc/Utilities/PDOServices.class.php");
 require_once("./inc/Utilities/DAO/StudentsDAO.class.php");
 require_once("./inc/Student_page.class.php");
 
-$errorMessage = ''; // Variável para armazenar a mensagem de erro
+$errorMessage = '';
 
 $warningMessage = '';
 
