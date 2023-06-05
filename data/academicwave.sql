@@ -2,42 +2,52 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 02, 2023 at 05:53 AM
--- Generation Time: Jun 04, 2023 at 03:06 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: localhost
+-- Tempo de geração: 06/06/2023 às 00:59
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `academicwave`
+-- Banco de dados: `academicwave`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course`
+-- Estrutura para tabela `course`
 --
 
 CREATE TABLE `course` (
   `courseId` int(11) NOT NULL,
-  `courseName` char(50) DEFAULT NULL,
-  `courseWork_1` float(2,1) DEFAULT NULL,
-  `courseWork_2` float(2,1) DEFAULT NULL,
-  `midTerm` float(2,1) DEFAULT NULL,
-  `finalExam` float(2,1) DEFAULT NULL
+  `courseName` char(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `course`
+--
+
+INSERT INTO `course` (`courseId`, `courseName`) VALUES
+(1, 'Data Science'),
+(2, 'Cibersecurity'),
+(3, 'Culinary Arts'),
+(4, 'Psychology'),
+(5, 'Public Relations'),
+(6, 'Digital Marketing');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `enrollment`
+-- Estrutura para tabela `enrollment`
 --
 
 CREATE TABLE `enrollment` (
@@ -46,11 +56,84 @@ CREATE TABLE `enrollment` (
   `courseId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `enrollment`
+--
+
+INSERT INTO `enrollment` (`enrollmentId`, `stuId`, `courseId`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 2),
+(4, 4, 3),
+(5, 5, 4),
+(6, 6, 5),
+(7, 7, 3),
+(8, 8, 6),
+(9, 9, 6),
+(10, 10, 3),
+(11, 11, 6),
+(12, 12, 3),
+(13, 13, 1),
+(14, 14, 2),
+(15, 15, 3),
+(16, 16, 5),
+(17, 17, 5),
+(18, 18, 6),
+(19, 19, 4),
+(20, 20, 1),
+(21, 21, 1),
+(22, 22, 2);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Estrutura para tabela `grades`
 --
+
+CREATE TABLE `grades` (
+  `gradeId` int(11) NOT NULL,
+  `stuId` int(11) DEFAULT NULL,
+  `courseId` int(11) DEFAULT NULL,
+  `courseWork_1` float(4,2) DEFAULT NULL,
+  `courseWork_2` float(4,2) DEFAULT NULL,
+  `midTerm` float(4,2) DEFAULT NULL,
+  `finalExam` float(4,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `grades`
+--
+
+INSERT INTO `grades` (`gradeId`, `stuId`, `courseId`, `courseWork_1`, `courseWork_2`, `midTerm`, `finalExam`) VALUES
+(1, 1, 1, NULL, NULL, NULL, NULL),
+(2, 2, 2, NULL, NULL, NULL, NULL),
+(3, 3, 2, NULL, NULL, NULL, NULL),
+(4, 4, 3, NULL, NULL, NULL, NULL),
+(5, 5, 4, NULL, NULL, NULL, NULL),
+(6, 6, 5, NULL, NULL, NULL, NULL),
+(7, 7, 3, NULL, NULL, NULL, NULL),
+(8, 8, 6, NULL, NULL, NULL, NULL),
+(9, 9, 6, NULL, NULL, NULL, NULL),
+(10, 10, 3, NULL, NULL, NULL, NULL),
+(11, 11, 6, NULL, NULL, NULL, NULL),
+(12, 12, 3, NULL, NULL, NULL, NULL),
+(13, 13, 1, NULL, NULL, NULL, NULL),
+(14, 14, 2, NULL, NULL, NULL, NULL),
+(15, 15, 3, NULL, NULL, NULL, NULL),
+(16, 16, 5, NULL, NULL, NULL, NULL),
+(17, 17, 5, NULL, NULL, NULL, NULL),
+(18, 18, 6, NULL, NULL, NULL, NULL),
+(19, 19, 4, NULL, NULL, NULL, NULL),
+(20, 20, 1, NULL, NULL, NULL, NULL),
+(21, 21, 1, NULL, NULL, NULL, NULL),
+(22, 22, 2, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `students`
+--
+
 CREATE TABLE `students` (
   `stuId` int(11) NOT NULL,
   `stuName` char(50) DEFAULT NULL,
@@ -61,9 +144,11 @@ CREATE TABLE `students` (
   `stuEmail` char(50) DEFAULT NULL,
   `stuCountry` char(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
--- Dumping data for table `students`
+-- Despejando dados para a tabela `students`
 --
+
 INSERT INTO `students` (`stuId`, `stuName`, `stuAge`, `stuUserName`, `stuPassword`, `stuCourse`, `stuEmail`, `stuCountry`) VALUES
 (1, 'Lucas Corradini', 20, 'lu-corradini', '$2y$10$RKdKA68F4NBc2XWHYSulreEDWbcwT3nbUnpX.j70gnG', 'Data Science', 'lucas.corradini.2003@gmail.com', 'Brazil'),
 (2, 'Leticia Guerra', 19, 'lele', '$2y$10$YfJk.W0QjHuMDEhdN91AMeeMSC21sPu3vp.CuGFhQMu', 'Cibersecurity', 'lele@test.com', 'Brazil'),
@@ -85,13 +170,13 @@ INSERT INTO `students` (`stuId`, `stuName`, `stuAge`, `stuUserName`, `stuPasswor
 (18, 'Bernardo Conville', 44, 'bconvilleh', '$2y$10$4lz/YExSfxtHSDGujZd9ouqgkX1hpfPUuq04WGIk6Ul', 'Digital Marketing', 'bconvilleh@shutterfly.com', 'Netherlands'),
 (19, 'Billie Furman', 22, 'bfurmani', '$2y$10$bm1o0s.i670AsPVAGGPDXe01JyuphaY3hSJPKKmEr0z', 'Psychology', 'bfurmani@imageshack.us', 'Philippines'),
 (20, 'Carr Vedntyev', 36, 'cvedntyevj', '$2y$10$XaJuR72b.CYnejH2NWLBM.Om44HT9RQKoDJgnPjtgY7', 'Data Science', 'cvedntyevj@posterous.com', 'Indonesia'),
-(21, 'Leticia Guerra', 20, 'Le-Guerra', '$2y$10$wRFmUedTEHTgOpgnjL8.k.c41AiMO2sGtALwJElPXED', 'PHP', 'LeGuerra@gmail.com', 'Brazil'),
-(22, 'Pedro', 20, 'pedro_ssgarcia', '$2y$10$14PCpQOm0Gl/S.1IpRo6iOX6RwG9b8x0R7Gvrhi1qLU', 'JavaScript', 'pedro@gmai.com', 'Mineiro');
+(21, 'Leticia Guerra', 20, 'Le-Guerra', '$2y$10$wRFmUedTEHTgOpgnjL8.k.c41AiMO2sGtALwJElPXED', 'Data Science', 'LeGuerra@gmail.com', 'Brazil'),
+(22, 'Pedro', 20, 'pedro_ssgarcia', '$2y$10$14PCpQOm0Gl/S.1IpRo6iOX6RwG9b8x0R7Gvrhi1qLU', 'Cibersecurity', 'pedro@gmai.com', 'Mineiro');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teacher`
+-- Estrutura para tabela `teacher`
 --
 
 CREATE TABLE `teacher` (
@@ -105,7 +190,7 @@ CREATE TABLE `teacher` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `teacher`
+-- Despejando dados para a tabela `teacher`
 --
 
 INSERT INTO `teacher` (`teacherId`, `teacherName`, `teacherUserName`, `teacherPassword`, `courseId`, `teacherEmail`, `teacherPhoneNumber`) VALUES
@@ -117,17 +202,17 @@ INSERT INTO `teacher` (`teacherId`, `teacherName`, `teacherUserName`, `teacherPa
 (6, 'Aldridge Wennington', 'awennington5', 'klKToQeF', 6, 'awennington5@booking.com', 729);
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `course`
+-- Índices de tabela `course`
 --
 ALTER TABLE `course`
   ADD PRIMARY KEY (`courseId`);
 
 --
--- Indexes for table `enrollment`
+-- Índices de tabela `enrollment`
 --
 ALTER TABLE `enrollment`
   ADD PRIMARY KEY (`enrollmentId`),
@@ -135,37 +220,58 @@ ALTER TABLE `enrollment`
   ADD KEY `courseId` (`courseId`);
 
 --
--- Indexes for table `students`
+-- Índices de tabela `grades`
+--
+ALTER TABLE `grades`
+  ADD PRIMARY KEY (`gradeId`),
+  ADD KEY `stuId` (`stuId`),
+  ADD KEY `courseId` (`courseId`);
+
+--
+-- Índices de tabela `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`stuId`);
 
 --
--- Indexes for table `teacher`
+-- Índices de tabela `teacher`
 --
 ALTER TABLE `teacher`
   ADD PRIMARY KEY (`teacherId`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `enrollment`
+-- AUTO_INCREMENT de tabela `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enrollmentId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `enrollmentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT de tabela `grades`
+--
+ALTER TABLE `grades`
+  MODIFY `gradeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- Restrições para tabelas despejadas
 --
 
 --
--- Constraints for table `enrollment`
+-- Restrições para tabelas `enrollment`
 --
 ALTER TABLE `enrollment`
   ADD CONSTRAINT `enrollment_ibfk_1` FOREIGN KEY (`stuId`) REFERENCES `students` (`stuId`),
   ADD CONSTRAINT `enrollment_ibfk_2` FOREIGN KEY (`courseId`) REFERENCES `course` (`courseId`);
+
+--
+-- Restrições para tabelas `grades`
+--
+ALTER TABLE `grades`
+  ADD CONSTRAINT `grades_ibfk_1` FOREIGN KEY (`stuId`) REFERENCES `students` (`stuId`),
+  ADD CONSTRAINT `grades_ibfk_2` FOREIGN KEY (`courseId`) REFERENCES `enrollment` (`courseId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
