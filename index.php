@@ -69,6 +69,6 @@ if (isset($currentUser)) {
     echo Page::newStudentForm();
 }
 // var_dump($studentsList);
-echo Page::teacherContact(); // contact form
+// echo Page::teacherContact(); // contact form
 echo Page::getPageFooter();
 ?>
