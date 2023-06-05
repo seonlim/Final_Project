@@ -56,9 +56,7 @@ class Page{
             <td>'.$student->getStudentCourse().'</td>
             <td>'.$student->getStudentEmail().'</td>
             <td>'.$student->getStudentCountry().'</td>
-            <td>
-                <a href="?editForm=edit&stuId= '.$student->getStudentUserName().'" >Edit</a>
-            </td>
+            <td><a href="?editForm=edit&stuId='.$student->getStudentUserName().'">Edit</a></td>
         </tr>
         ';
         return $stuRow;
