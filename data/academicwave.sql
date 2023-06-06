@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 06/06/2023 às 02:38
+-- Tempo de geração: 06/06/2023 às 04:17
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -115,7 +115,7 @@ INSERT INTO `grades` (`gradeId`, `stuId`, `courseId`, `courseWork_1`, `courseWor
 (8, 8, 6, 80.00, 79.00, 50.00, 66.00),
 (9, 9, 6, 32.00, 78.00, 56.00, 33.00),
 (10, 10, 3, 54.00, 24.00, 77.00, 65.00),
-(11, 11, 6, NULL, NULL, NULL, NULL),
+(11, 11, 6, 87.00, 77.00, 65.00, 34.00),
 (12, 12, 3, 80.00, 99.00, 54.00, 33.00),
 (13, 13, 1, 98.00, 78.00, 44.00, 32.00),
 (14, 14, 2, 87.00, 61.00, 41.00, 90.00),

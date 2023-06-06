@@ -81,6 +81,10 @@ class Student_Page{
                 <table>
                     <tbody>
                         <tr class="row">
+                            <th scope="row"> Student ID: </th>
+                            <td>'.$nowUser->getStudentId().'</td>
+                        </tr>
+                        <tr class="row">
                             <th scope="row"> Name: </th>
                             <td>'.$nowUser->getStudentName().'</td>
                         </tr>
