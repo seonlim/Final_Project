@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 06/06/2023 às 00:59
+-- Tempo de geração: 06/06/2023 às 02:38
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -105,28 +105,28 @@ CREATE TABLE `grades` (
 --
 
 INSERT INTO `grades` (`gradeId`, `stuId`, `courseId`, `courseWork_1`, `courseWork_2`, `midTerm`, `finalExam`) VALUES
-(1, 1, 1, NULL, NULL, NULL, NULL),
-(2, 2, 2, NULL, NULL, NULL, NULL),
-(3, 3, 2, NULL, NULL, NULL, NULL),
-(4, 4, 3, NULL, NULL, NULL, NULL),
-(5, 5, 4, NULL, NULL, NULL, NULL),
-(6, 6, 5, NULL, NULL, NULL, NULL),
-(7, 7, 3, NULL, NULL, NULL, NULL),
-(8, 8, 6, NULL, NULL, NULL, NULL),
-(9, 9, 6, NULL, NULL, NULL, NULL),
-(10, 10, 3, NULL, NULL, NULL, NULL),
+(1, 1, 1, 97.00, 89.00, 85.00, 75.00),
+(2, 2, 2, 90.00, 97.00, 70.00, 63.00),
+(3, 3, 2, 89.00, 65.00, 55.00, 45.00),
+(4, 4, 3, 84.00, 91.00, 41.00, 54.00),
+(5, 5, 4, 54.00, 32.00, 54.00, 32.00),
+(6, 6, 5, 90.00, 76.00, 54.00, 36.00),
+(7, 7, 3, 54.00, 66.00, 76.00, 87.00),
+(8, 8, 6, 80.00, 79.00, 50.00, 66.00),
+(9, 9, 6, 32.00, 78.00, 56.00, 33.00),
+(10, 10, 3, 54.00, 24.00, 77.00, 65.00),
 (11, 11, 6, NULL, NULL, NULL, NULL),
-(12, 12, 3, NULL, NULL, NULL, NULL),
-(13, 13, 1, NULL, NULL, NULL, NULL),
-(14, 14, 2, NULL, NULL, NULL, NULL),
-(15, 15, 3, NULL, NULL, NULL, NULL),
-(16, 16, 5, NULL, NULL, NULL, NULL),
-(17, 17, 5, NULL, NULL, NULL, NULL),
-(18, 18, 6, NULL, NULL, NULL, NULL),
-(19, 19, 4, NULL, NULL, NULL, NULL),
-(20, 20, 1, NULL, NULL, NULL, NULL),
-(21, 21, 1, NULL, NULL, NULL, NULL),
-(22, 22, 2, NULL, NULL, NULL, NULL);
+(12, 12, 3, 80.00, 99.00, 54.00, 33.00),
+(13, 13, 1, 98.00, 78.00, 44.00, 32.00),
+(14, 14, 2, 87.00, 61.00, 41.00, 90.00),
+(15, 15, 3, 40.00, 50.00, 21.00, 87.00),
+(16, 16, 5, 92.00, 21.00, 32.00, 77.00),
+(17, 17, 5, 89.00, 77.00, 32.00, 22.00),
+(18, 18, 6, 86.00, 63.00, 31.00, 12.00),
+(19, 19, 4, 32.00, 70.00, 54.00, 43.00),
+(20, 20, 1, 88.00, 93.00, 32.00, 67.00),
+(21, 21, 1, 81.00, 76.00, 67.00, 87.00),
+(22, 22, 2, 90.00, 95.00, 87.00, 72.00);
 
 -- --------------------------------------------------------
 
@@ -150,28 +150,28 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`stuId`, `stuName`, `stuAge`, `stuUserName`, `stuPassword`, `stuCourse`, `stuEmail`, `stuCountry`) VALUES
-(1, 'Lucas Corradini', 20, 'lu-corradini', '$2y$10$RKdKA68F4NBc2XWHYSulreEDWbcwT3nbUnpX.j70gnG', 'Data Science', 'lucas.corradini.2003@gmail.com', 'Brazil'),
-(2, 'Leticia Guerra', 19, 'lele', '$2y$10$YfJk.W0QjHuMDEhdN91AMeeMSC21sPu3vp.CuGFhQMu', 'Cibersecurity', 'lele@test.com', 'Brazil'),
-(3, 'Luella Corkel', 33, 'lcorkel2', '$2y$10$lSLh3ww064OipInpcbMfaeI3rQYJLDYjkDzZWvCrbNK', 'Cibersecurity', 'lcorkel2@moonfruit.com', 'Honduras'),
-(4, 'Harmonia Ciotti', 24, 'hciotti3', '$2y$10$yCx8eA064RplT8fEvE5WZOlcs.adNywtGzW0rOMwRS2', 'Culinary Arts', 'hciotti3@usatoday.com', 'China'),
-(5, 'Lyell Elphinston', 29, 'lelphinston4', '$2y$10$neSWaM6DNHpHaS..I/LDkuMEFTLJciOhMY47ji5Vltl', 'Psychology', 'lelphinston4@cdbaby.com', 'Sweden'),
-(6, 'Lazaro Baglin', 24, 'lbaglin5', '$2y$10$HZuaGR/Q4sBaKT3Le17bx.lMAYv/gxy1rJrY6F15sV0', 'Public Relations', 'lbaglin5@mediafire.com', 'France'),
-(7, 'Adolphe Garms', 39, 'agarms6', '$2y$10$FLsZdi7TOmM6FYCD16dB4ugANQ86Yr4ty5j.Z5QxLx7', 'Culinary Arts', 'agarms6@amazon.de', 'Denmark'),
-(8, 'Elora Marczyk', 33, 'emarczyk7', '$2y$10$wlqCqtJT9jtg5pYNQ4bkLumAGeyH9subuwhCN1PgQgh', 'Digital Marketing', 'emarczyk7@lycos.com', 'Chile'),
-(9, 'Derek Babon', 26, 'dbabon8', '$2y$10$oaPWMDR.eAPXc4hl4PuwEO3aTEpvI9bR1RU1fwAovqX', 'Digital Marketing', 'dbabon8@go.com', 'Indonesia'),
-(10, 'Dewey Cattel', 21, 'dcattel9', '$2y$10$xyzzYJItBHZLEPAGOSMf7uzz..MGWj.6qvRdcziNtnt', 'Culinary Arts', 'dcattel9@apple.com', 'France'),
-(11, 'Broderick Bellringer', 44, 'bbellringera', '$2y$10$yF9EwRQZVvFLfjoaBIfrOuJnopqtCTaNRrhg8MBw4A7', 'Digital Marketing', 'bbellringera@webmd.com', 'Indonesia'),
-(12, 'Aaren Canlin', 23, 'acanlinb', '$2y$10$cZTjzAhdImsQY7gyqQucIe189W04u6F9CcDVF3CW1T4', 'Culinary Arts', 'acanlinb@jimdo.com', 'United States'),
-(13, 'Gabbey Mityashev', 39, 'gmityashevc', '$2y$10$85maXoku1C.C6CkkdyjusOPGFwQV4yF1wIAacJRTutI', 'Data Science', 'gmityashevc@addtoany.com', 'Mexico'),
-(14, 'Aeriel Pedwell', 34, 'apedwelld', '$2y$10$mkArXRVymlKVe4Ot05f4ue41LtGknHrKs2ckqpT2A6f', 'Cibersecurity', 'apedwelld@alibaba.com', 'Indonesia'),
-(15, 'Abigael Ipsley', 35, 'aipsleye', '$2y$10$3W.SYhGzkYBdRZjR02hWvOChR1XHXz4A9jwVDTYcNJ9', 'Culinary Arts', 'aipsleye@google.pl', 'Mexico'),
-(16, 'Sophie Grigorini', 21, 'sgrigorinif', '$2y$10$w3AifnKsF/rlHXgw.GAFAuQXmyWO54vZlXyomYp9o5I', 'Public Relations', 'sgrigorinif@facebook.com', 'Indonesia'),
-(17, 'Lombard Austwick', 21, 'laustwickg', '$2y$10$XfvXfxUy1X66BUKmEqs7v.lObp8rx3D2IYiOjwCQhK1', 'Public Relations', 'laustwickg@opensource.org', 'China'),
-(18, 'Bernardo Conville', 44, 'bconvilleh', '$2y$10$4lz/YExSfxtHSDGujZd9ouqgkX1hpfPUuq04WGIk6Ul', 'Digital Marketing', 'bconvilleh@shutterfly.com', 'Netherlands'),
-(19, 'Billie Furman', 22, 'bfurmani', '$2y$10$bm1o0s.i670AsPVAGGPDXe01JyuphaY3hSJPKKmEr0z', 'Psychology', 'bfurmani@imageshack.us', 'Philippines'),
-(20, 'Carr Vedntyev', 36, 'cvedntyevj', '$2y$10$XaJuR72b.CYnejH2NWLBM.Om44HT9RQKoDJgnPjtgY7', 'Data Science', 'cvedntyevj@posterous.com', 'Indonesia'),
-(21, 'Leticia Guerra', 20, 'Le-Guerra', '$2y$10$wRFmUedTEHTgOpgnjL8.k.c41AiMO2sGtALwJElPXED', 'Data Science', 'LeGuerra@gmail.com', 'Brazil'),
-(22, 'Pedro', 20, 'pedro_ssgarcia', '$2y$10$14PCpQOm0Gl/S.1IpRo6iOX6RwG9b8x0R7Gvrhi1qLU', 'Cibersecurity', 'pedro@gmai.com', 'Mineiro');
+(1, 'Lucas Corradini', 20, 'lu-corradini', '$2y$10$8erJVRVY2FG6WeU3egmhT.omQJRTNyGJShSsEOfs5xXM7EmKiHTNC', 'Data Science', 'lucas.corradini.2003@gmail.com', 'Brazil'),
+(2, 'Leticia Guerra', 19, 'lele', '$2y$10$bPUoBTsWHV0iGeyuDarPPuKh2Sc12/JMGDCqtdjjPhykY9nffDAEa', 'Cibersecurity', 'lele@test.com', 'Brazil'),
+(3, 'Luella Corkel', 33, 'lcorkel2', '$2y$10$1BX4xfNPIgcb08dsPYLKKu28eflvypzR7CFtoJps7ax9SSDctuFZq', 'Cibersecurity', 'lcorkel2@moonfruit.com', 'Honduras'),
+(4, 'Harmonia Ciotti', 24, 'hciotti3', '$2y$10$UZMwvDd1u9MaaMh7Q.wkLeZsMkCtazCXw1Ork1poRz1GPy8BHTc2W', 'Culinary Arts', 'hciotti3@usatoday.com', 'China'),
+(5, 'Lyell Elphinston', 29, 'lelphinston4', '$2y$10$oeVMhYh/yqj9e5M5ctz.xuD4rvqYjMtKw/acALJ79khffElZ1Ia/a', 'Psychology', 'lelphinston4@cdbaby.com', 'Sweden'),
+(6, 'Lazaro Baglin', 24, 'lbaglin5', '$2y$10$R8oV2LEPlddUI3OGuvSR1eLqOTN0Sz8nxUVcaxWtM.jLN2NncIqmm', 'Public Relations', 'lbaglin5@mediafire.com', 'France'),
+(7, 'Adolphe Garms', 39, 'agarms6', '$2y$10$n2h/4GGwSRUuJ2zTtZ.7IO1aTSFokIf9TzZaY0zzsvpVKrZMHj.mK', 'Culinary Arts', 'agarms6@amazon.de', 'Denmark'),
+(8, 'Elora Marczyk', 33, 'emarczyk7', '$2y$10$9.RwKzRt0vN0lkHYP4WanObROsiK9K03Cxqk3Njb0t3rEgVMBUiVm', 'Digital Marketing', 'emarczyk7@lycos.com', 'Chile'),
+(9, 'Derek Babon', 26, 'dbabon8', '$2y$10$.mxB2sat59uEaKwy.km1/u6vOqQfKSj6JU0GwLcOQCsSreaO34U0.', 'Digital Marketing', 'dbabon8@go.com', 'Indonesia'),
+(10, 'Dewey Cattel', 21, 'dcattel9', '$2y$10$aJxpIb/aKfk39Ifzkoe/Wu/oro2PWlhHN5ON6EOpr0BaSDlK5CWAy', 'Culinary Arts', 'dcattel9@apple.com', 'France'),
+(11, 'Broderick Bellringer', 44, 'bbellringera', '$2y$10$x1x1iN5cVjfaUJbP4mR54.7PkSOXCXCTUnrqiSTqtQWCuWnwWzDrK', 'Digital Marketing', 'bbellringera@webmd.com', 'Indonesia'),
+(12, 'Aaren Canlin', 23, 'acanlinb', '$2y$10$bjnX.Pw9mPxgU.YIGf5Dy.W8x7TWLq4F1w5JwATUPwk2g7xBkKTre', 'Culinary Arts', 'acanlinb@jimdo.com', 'United States'),
+(13, 'Gabbey Mityashev', 39, 'gmityashevc', '$2y$10$P5QPLFRGCvY5/nYfX9vQyezxQDGAUhCD1ULrLq81HO2PKVd5ldOtu', 'Data Science', 'gmityashevc@addtoany.com', 'Mexico'),
+(14, 'Aeriel Pedwell', 34, 'apedwelld', '$2y$10$wnTaOo2IljEsThShfDPpLe1nptRgGN6oWSxgADp5Rya/5V6pG3.We', 'Cibersecurity', 'apedwelld@alibaba.com', 'Indonesia'),
+(15, 'Abigael Ipsley', 35, 'aipsleye', '$2y$10$oaPUjcxHSua5aPMj4eeky.RFSvB4H/WOwo.e6LHHASu1yn2YXHf3K', 'Culinary Arts', 'aipsleye@google.pl', 'Mexico'),
+(16, 'Sophie Grigorini', 21, 'sgrigorinif', '$2y$10$HDk2jJOX81XrKQeBiD5ndOBqdmi7tYhRdBt8TIozMoilqf9iA8LSa', 'Public Relations', 'sgrigorinif@facebook.com', 'Indonesia'),
+(17, 'Lombard Austwick', 21, 'laustwickg', '$2y$10$6U6B96LOrqRqSNv0CM.1ne1EOqxv3VRestfGg98k0L9fujlwgyRMu', 'Public Relations', 'laustwickg@opensource.org', 'China'),
+(18, 'Bernardo Conville', 44, 'bconvilleh', '$2y$10$cTPl4benFtPVWI5UK4gGDui3xmBq7968OmEU/ijXETDFSPQxuSCHy', 'Digital Marketing', 'bconvilleh@shutterfly.com', 'Netherlands'),
+(19, 'Billie Furman', 22, 'bfurmani', '$2y$10$IAV0rNJraa8sivwJA7juFOnp6kL0n2JwXkSCKJJLMoLaby/1pV1KS', 'Psychology', 'bfurmani@imageshack.us', 'Philippines'),
+(20, 'Carr Vedntyev', 36, 'cvedntyevj', '$2y$10$2MWt0PCQkJ.G6ZnSajrRruEpxJ1OqQV85CAhLI6RaPEzqPZtP2B.O', 'Data Science', 'cvedntyevj@posterous.com', 'Indonesia'),
+(21, 'Leticia Guerra', 20, 'Le-Guerra', '$2y$10$UsojFWosdJwReiGEzQbwp.GeJ.Uc6QimUkq.vsoLYhaXXFFRzD2fa', 'Data Science', 'LeGuerra@gmail.com', 'Brazil'),
+(22, 'Pedro', 20, 'pedro_ssgarcia', '$2y$10$MNTivWUGWoo8thpYnu/RzefJcSCZg6Zt9gTfa9LN0JEtdKnfwYA72', 'Cibersecurity', 'pedro@gmai.com', 'Mineiro');
 
 -- --------------------------------------------------------
 
