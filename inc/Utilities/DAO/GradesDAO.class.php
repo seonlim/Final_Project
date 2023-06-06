@@ -5,7 +5,7 @@ class GradesDAO {
 
     // initialize database - grades table
     public static function init(){
-        self::$db = new PDOServices("grades");
+        self::$db = new PDOServices("Grades");
     }
 
     public static function getAllStudentsGrades(){
@@ -18,5 +18,17 @@ class GradesDAO {
         return self::$db->resultSet();
     }
 
+    public static function getStudentGrades( $stuId ){
+        $sql = "SELECT * FROM grades WHERE stuId = :stuId";
+
+        self::$db->query($sql);
+        self::$db->bind(':stuId', $stuId);
+
+        self::$db->execute();
+
+        return self::$db->getResultSet();
+    }
+
+    
    
 }

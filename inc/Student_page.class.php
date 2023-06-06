@@ -118,6 +118,50 @@ class Student_Page{
             
     }
 
+    public static function studentGrades($studentGrades){
+        $gradesTable = ' 
+            <table>
+            <thead>
+                <tr>
+                    <th>CourseWork 01</th>
+                    <th>CourseWork 02</th>
+                    <th>MidTerm</th>
+                    <th>Final Exam</th>
+                </tr>
+            </thead>
+            <tbody>';
+
+            $gradesRows = ''; // variable to store the rows
+
+            foreach($studentGrades as $grade) {
+                $gradesRows .= self::gradesRow($grade);
+            }
+        
+            $gradesTable .= $gradesRows;
+        
+            $gradesTable .= '
+            </tbody>
+        </table>
+        ';
+
+        return $gradesTable;
+    
+    }
+    
+    public static function gradesRow($grade) {
+    
+        $gradesRow = '
+            <tr>
+                <td>'.$grade->getCourseWork_1().'</td>
+                <td>'.$grade->getCourseWork_2().'</td>
+                <td>'.$grade->getMidTerm().'</td>
+                <td>'.$grade->getFinalExam().'</td>            
+            </tr>
+        ';
+        return $gradesRow;
+    }
+    
+
     public static function studentFooter(){
         $studentFooter = '
             </body>

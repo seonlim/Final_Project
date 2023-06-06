@@ -64,7 +64,5 @@ class Grades {
 
     public function setFinalExam(float $finalExam){
         $this->finalExam = $finalExam;
-    }
-
-    
+    } 
 }
