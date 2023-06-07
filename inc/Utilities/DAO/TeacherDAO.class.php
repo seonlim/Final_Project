@@ -4,7 +4,7 @@ class TeacherDAO{
     private static $db;
 
     public static function init(){
-        self::$db = new PDOService("teacher");
+        self::$db = new PDOServices("teacher");
     }
 
     public static function getTeacherByUserName($teacherUserName){

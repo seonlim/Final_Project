@@ -14,7 +14,7 @@ require_once("inc/config.inc.php");
 
 // starting the database connection.
 session_start();
-StudentsDAO::startDb();
+StudentsDAO::init();
 LogHandlerDAO::checkteaLogin();
 TeacherDAO::init();
 

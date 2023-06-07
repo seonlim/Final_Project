@@ -14,7 +14,7 @@ class StudentsDAO{
 
         self::$db->execute();
 
-        return self::$db->resultSet();
+        return self::$db->getResultSet();
     }
 
     public static function getStudentByUserName( $stuUserName ){
