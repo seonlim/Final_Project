@@ -40,13 +40,13 @@ form > section{
     row-gap: 3vh;
 }
 
-input{
+/* input{
     padding: 3%;
     width: 320px;
     border-radius: 15px;
     border: none;
     border: 1px solid black;
-}
+} */
 
 .btnSubmit,
 .btnContact{
@@ -121,10 +121,13 @@ tbody tr:hover{
     background-color: #96D2CD;
 }
 
+input[type="text"],input[type="email"],
 .form-contact textarea {
+    width: 320px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     resize: none;
-    height: 150px;
-    width: 340px;
 }
 
 aside{
@@ -137,15 +140,6 @@ aside{
     display: flex;
     flex-direction: column;
     row-gap: 5vh;
-}
-
-textarea{
-  padding: 12px 10px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
 }
 
 .title{
