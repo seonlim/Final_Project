@@ -47,33 +47,15 @@ class Page{
             <td>'.$notice->getDescription().'</td>
             <td>'.$notice->getWriteDate().'</td>
             <td>'.$notice->getWriter().'</td>
-
         </tr>
         ';
         return $noticeRow;
     }
 
-    public static function addNotice(Notice $newNotice){
-        $sql = "INSERT INTO notice (noticeId, noticeTitle, description, writer, writeDate) 
-        VALUES (:noticeId, :noticeTitle, :description, :writer, :writeDate)";
-    
-        self::$db->query($sql);
-    
-        self::$db->bind(":noticeId", $newNotice->getNoticeId());
-        self::$db->bind(":noticeTitle", $newNotice->getNoticeTitle());
-        self::$db->bind(":description", $newNotice->getDescription());
-        self::$db->bind(":writeDate", $newNotice->getWriteDate());
-        self::$db->bind(":writer", $newNotice->getWriter());
-    
-        self::$db->execute();
-    }
-    
-    
-
     public static function newNoticeForm(){
         $newNoticeForm = '
         <section class="noticeSection">
-            <form class="noticeForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
+            <form class="newNoticeForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
                 <article class="title">
                     <h2>Add a New Notice</h2>
                 </article>

@@ -8,11 +8,10 @@ class NoticeDAO {
     }
     
     public static function insertNotice(Notice $newNotice){
-        $sql = "INSERT INTO notice (noticeId, noticeTitle, description, writeDate, writer) VALUES (:noticeId, :noticeTitle, :description, :writeDate, :writer)";
+        $sql = "INSERT INTO notice (noticeTitle, description, writeDate, writer) VALUES (:noticeTitle, :description, :writeDate, :writer)";
     
         self::$db->query($sql);
     
-        self::$db->bind(":noticeId", $newNotice->getNoticeId());
         self::$db->bind(":noticeTitle", $newNotice->getNoticeTitle());
         self::$db->bind(":description", $newNotice->getDescription());
         self::$db->bind(":writeDate", $newNotice->getWriteDate());
@@ -23,15 +22,13 @@ class NoticeDAO {
         return self::$db->lastInsertedId();
     }
     
-    public static function getAllNotices()
-    {
+    public static function getAllNotices() {
         $sql = "SELECT * FROM notice";
-    
         self::$db->query($sql);
-        
         self::$db->execute();
-    
         return self::$db->resultSet();
+
+
     }
 
     public static function getNoticeById($noticeId){
