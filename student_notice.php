@@ -13,7 +13,7 @@ $singleNotice = NoticeDAO::getNoticeById(1);
 if (!empty($_POST)) {
     $newNotice = new Notice();
     $newNotice->setTitle($_POST['title']);
-    $newNotice->setContent($_POST['content']);
+    $newNotice->setDescription($_POST['description']);
     $newNotice->setWriter("Teacher Name"); 
     
     NoticeDAO::insertNotice($newNotice);
@@ -23,6 +23,6 @@ if (!empty($_POST)) {
 
 echo Page::getPageHead();
 echo Page::noticeTable(NoticeDAO::getAllNotices());
-echo Page::newNoticeForm();
+// echo Page::addNotice($newNotice);
 echo Page::getPageFooter();
 ?>

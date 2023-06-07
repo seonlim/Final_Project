@@ -22,16 +22,15 @@ class Page{
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Title</th>
-                    <th>Content</th>
+                    <th>Description</th>
                     <th>Date</th>
                     <th>Writer</th>
                 </tr>
             </thead>
             <tbody>
             ';
-            foreach($noticeTable as $notice){
+            foreach($noticeList as $notice){
                 $noticeTable .= self::noticeRow($notice);
             }
             $noticeTable .= '
@@ -44,15 +43,29 @@ class Page{
     public static function noticeRow($notice){
         $noticeRow = '
         <tr>
-            <td>'.$notice->getNoticeId().'</td>
             <td>'.$notice->getNoticeTitle().'</td>
-            <td>'.$notice->getNotiContent().'</td>
+            <td>'.$notice->getNotiDescription().'</td>
             <td>'.$notice->getNoticeWriteDate().'</td>
             <td>'.$notice->getNoticeWriter().'</td>
 
         </tr>
         ';
         return $noticeRow;
+    }
+
+    public static function addNotice(Notice $newNotice){
+        $sql = "INSERT INTO notice (noticeId, noticeTitle, description, writer) 
+        VALUES (:noticeId, :noticeTitle, :description, :writer)";
+
+        self::$db->query($sql);
+
+        self::$db->bind(":noticeId", $newNotice->getNoticeId());
+        self::$db->bind(":noticeTitle", $newNotice->getTitle());
+        self::$db->bind(":description", $newNotice->getDescription());
+        self::$db->bind(":writer", $newNotice->getWriter());
+
+        self::$db->execute();
+
     }
 
     public static function getPageFooter(){
