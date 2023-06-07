@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: unset;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    padding-top: 5vh;
+    color: #22577E;
+    width: 90%;
+    padding-left: 5vh;
+}
+
+h3 {
+    padding-top: 5vh;
+    color:lightslategrey ;
+    width: 90%;
+    padding-left: 5vh;
+}
+
+main {
+    font-size: 18px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+
+/* CSS for studentInfo */
+#studentInfo {
+    width: 100%;
+}
+
+.studentInfo-Table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.studentInfo-Table th,
+.studentInfo-Table td {
+    padding: 2vh;
+    border: 1px solid #ddd;
+    text-align: justify;
+}
+
+
+.studentInfo-Table th {
+    /* text-align: left; */
+    /* color: #22577E; */
+    color: whitesmoke;
+    background-color: #5584AC;
+    width: 30%;
+}
+
+.studentInfo-Table td {
+    text-align: center;
+    color: lightslategrey;
+    width: 40%;
+}
+
+span {
+    color:crimson;
+    font-weight: 600;
+}
+
+p {
+    width: 70%;
+    margin-top: 2vh;
+    text-transform: lowercase;
+    font-weight: 400;
+    color:lightslategrey;
+    text-align: center;
+}
+
+/* talk to teacher css */ 
+.form-contact {
+    width: 40%;
+    padding: 5vh;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    color: #22577E;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+form aside {
+    display: grid;
+    gap: 5px;
+}
+
+label {
+    color: #5584AC;
+    font-weight: 600;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.toTeacherBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #5584AC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #22577E;
+}

@@ -7,6 +7,9 @@ require_once("./inc/Utilities/DAO/StudentsDAO.class.php");
 require_once("./inc/Utilities/DAO/GradesDAO.class.php");
 require_once("./inc/Utilities/LoginHandler.class.php");
 require_once("./inc/Student_page.class.php");
+require_once("inc/HomeHeader.class.php");
+require_once("inc/Footer.class.php");
+require_once("inc/Title.class.php");
 
 
 session_start();
@@ -17,12 +20,22 @@ GradesDAO::init();
 $nowUser = $_SESSION['usernameStu'];
 
 
-echo '<h1>Hello '.$nowUser->getStudentName().' !'.'</h1>';
 
-Student_Page::studentHead();
-echo Student_Page::studentInfo($nowUser);
+echo Student_Page::studentHead("studentGrades.css");
+
+echo Title::htmlTitle("Student Grades");
+echo HomeHeader::homeBanner("<h5>"."<a href='#'> NOTICE </a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>"."<a href='studentInfo.php'>" .$nowUser->getStudentUserName() ."</a>". "</h5>");
+
+
+// echo '<h1>Hello '.$nowUser->getStudentName().' !'.'</h1>';
+// echo Student_Page::studentInfo($nowUser);
+
 $studentGrades = GradesDAO::getStudentGrades($nowUser->getStudentId());
 echo Student_Page::studentGrades($studentGrades);
 
+// echo '<a href="logout.php">Log out</a>';
+
 // var_dump(Student_Page::studentInfo($nowUser));
-Student_Page::studentFooter();
+echo Student_Page::studentFooter();
+echo Footer::pageFooter();
+

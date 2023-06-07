@@ -61,13 +61,18 @@ header {
   font-size: 20px;
 }
 
+.homeHeader h5 {
+  color: whitesmoke;
+  font-size: 24px;
+}
+
 .homeHeader a:hover,
 .userHeader a:hover {
   color: black;
 }
 
-.homeHeader > article,
-.userHeader > article {
+.homeHeader > #headerLogo,
+.userHeader > #headerLogo {
   width: 20vh;
   height: 20vh;
 }

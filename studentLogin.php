@@ -40,7 +40,7 @@ if (!empty($_POST)) {
             // set the user typed as the now user
             $_SESSION['usernameStu'] = $alreadyUser;
 
-            header("Location: welcome-test.php");
+            header("Location: studentInfo.php");
             exit();
         } else {
             $errorMessage = "Username or Password incorrect";
@@ -48,7 +48,10 @@ if (!empty($_POST)) {
     }
 } 
 
-echo Student_Page::studentHead();
+echo Student_Page::studentHead("studentLogin.css");
+echo Title::htmlTitle("Student Login");
+echo HomeHeader::homeBanner("","","");
+
 if (!empty($errorMessage)) {
     echo Student_Page::errorPopUp($errorMessage);
 }
@@ -56,8 +59,6 @@ if (!empty($errorMessage)) {
 if (!empty($warningMessage)) {
     echo Student_Page::warningPopUp($warningMessage);
 }
-echo Title::htmlTitle("Home page");
-echo HomeHeader::homeBanner();
 echo Student_Page::studentLogin();
 // echo Student_Page::studentFooter();
 echo Footer::pageFooter();

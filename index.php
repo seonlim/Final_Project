@@ -7,7 +7,7 @@ require_once("./inc/Footer.class.php");
 
 
 echo Title::htmlTitle("Home page");
-echo HomeHeader::homeBanner();
+echo HomeHeader::homeBanner("","","<a href='studentLogin.php'>Login</a>");
 echo Home::homeMain();
 echo Footer::pageFooter();
 echo Footer::pageEnd();

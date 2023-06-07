@@ -11,6 +11,10 @@ require_once("inc/Utilities/DAO/LogHandlerDAO.php");
 require_once("inc/Utilities/DAO/TeacherDAO.class.php");
 require_once("inc/Utilities/Teacher_Page.php");
 require_once("inc/config.inc.php");
+// Header and footer from home page
+require_once("inc/HomeHeader.class.php");
+require_once("inc/Footer.class.php");
+require_once("inc/Title.class.php");
 
 // starting the database connection.
 session_start();
@@ -70,6 +74,10 @@ if (! empty($_GET["editForm"])) {
 $studentsRepository->setStudentsList($studentsList);
 
 echo Page::getPageHead();
+
+// header 
+echo HomeHeader::homeBanner("","<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
+
 echo Page::stuTable(StudentsDAO::getAllStudents());
 if (isset($currentUser)) {
     echo Page::editStudentForm($currentUser);
@@ -79,4 +87,6 @@ if (isset($currentUser)) {
 // var_dump($studentsList);
 // echo Page::teacherContact(); // contact form
 echo Page::getPageFooter();
+echo Footer::pageFooter();
+
 ?>

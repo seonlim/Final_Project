@@ -55,6 +55,9 @@ if (!empty($_POST)) {
 } 
 
 echo Teacher_Page::teacherHead();
+echo Title::htmlTitle("Teacher Login");
+echo HomeHeader::homeBanner("","","");
+
 if (!empty($errorMessage)) {
     echo Teacher_Page::errorPopUp($errorMessage);
 }
@@ -63,8 +66,6 @@ if (!empty($warningMessage)) {
     echo Teacher_Page::warningPopUp($warningMessage);
 }
 
-echo Title::htmlTitle("Home page");
-echo HomeHeader::homeBanner();
 echo Teacher_Page::teacherLogin();
 // echo Teacher_Page::teacherFooter();
 echo Footer::pageFooter();

@@ -6,15 +6,18 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
+/* body{
     display: flex;
     justify-content: center;
-}
+} */
 
 main{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     display: flex;
     column-gap: 7vh;
     width: 97%;
+    justify-content: center;
 }
 
 form,.form-contact{
@@ -64,7 +67,7 @@ input{
     cursor: pointer;
 }
 
-a{
+main a{
     text-decoration: none;
     color: black;
     border: 1px solid black;
@@ -73,7 +76,7 @@ a{
     transition: .3s;
 }
 
-a:hover{
+main a:hover{
     background-color: black;
     color: #5485AE;
     cursor: pointer;
