@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 07/06/2023 às 05:11
+-- Tempo de geração: 07/06/2023 às 05:17
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -106,7 +106,7 @@ CREATE TABLE `grades` (
 --
 
 INSERT INTO `grades` (`gradeId`, `stuId`, `courseId`, `term`, `courseWork_1`, `courseWork_2`, `midTerm`, `finalExam`) VALUES
-(1, 1, 1, 4, 97.00, 89.00, 85.00, 75.00),
+(1, 1, 1, 1, 97.00, 89.00, 85.00, 75.00),
 (2, 2, 2, 4, 90.00, 97.00, 70.00, 63.00),
 (3, 3, 2, 3, 89.00, 65.00, 55.00, 45.00),
 (4, 4, 3, 2, 84.00, 91.00, 41.00, 54.00),
@@ -131,9 +131,9 @@ INSERT INTO `grades` (`gradeId`, `stuId`, `courseId`, `term`, `courseWork_1`, `c
 (33, 22, 4, 4, 94.00, 80.00, 87.00, 98.00),
 (34, 2, 2, 5, 80.00, 88.00, 43.00, 65.00),
 (35, 2, 2, 3, 90.00, 92.00, 83.00, 67.40),
-(36, 1, 1, 5, 80.00, 88.00, 43.00, 65.00),
+(36, 1, 1, 4, 80.00, 88.00, 43.00, 65.00),
 (37, 1, 1, 3, 90.64, 92.70, 81.98, 90.64),
-(38, 1, 1, 4, 90.40, 98.20, 70.12, 73.71);
+(38, 1, 1, 2, 90.40, 98.20, 70.12, 73.71);
 
 -- --------------------------------------------------------
 
@@ -277,3 +277,10 @@ ALTER TABLE `enrollment`
 -- Restrições para tabelas `grades`
 --
 ALTER TABLE `grades`
+  ADD CONSTRAINT `grades_ibfk_1` FOREIGN KEY (`stuId`) REFERENCES `students` (`stuId`),
+  ADD CONSTRAINT `grades_ibfk_2` FOREIGN KEY (`courseId`) REFERENCES `enrollment` (`courseId`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
