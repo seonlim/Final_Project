@@ -57,5 +57,14 @@ class Teacher {
     public function setTeacherPhoneNumber(string $teacherPhoneNumber){
         $this->teacherPhoneNumber = $teacherPhoneNumber;
     }   
+
+    function checkteaLogin(string $passwordCheck): bool {
+        // Return a boolean (true or false) to check if the password given is correct for the now user
+        if ($passwordCheck === $this->getTeacherPassword()){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 ?>

@@ -13,11 +13,11 @@ body{
 
 main{
     display: flex;
-    column-gap: 12vh;
+    column-gap: 7vh;
     width: 97%;
 }
 
-form{
+form,.form-contact{
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
@@ -119,5 +119,32 @@ tbody tr:hover{
 
 .form-contact textarea {
     resize: none;
-    height: 300px;
+    height: 150px;
+    width: 340px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+textarea{
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.title{
+    text-align: center;
+    
 }

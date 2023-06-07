@@ -64,99 +64,129 @@ class Page{
 
     public static function newStudentForm(){
         $newStudentForm = '
-        <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
-            <section>
-                <section class="inputs">
-                    <article>
-                    <label for="stuId">ID</label>
-                    <input type="text" name="stuId" placeholder="Student ID">
-                    </article>
-                    <article>
-                        <label for="stuName">Name</label>
-                        <input type="text" name="stuName" placeholder="Student Name">
-                    </article>
-                    <article>
-                        <label for="stuAge">Age</label>
-                        <input type="text" name="stuAge" placeholder="Student Age">
-                    </article>
-                    <article>
-                        <label for="stuUserName">UserName</label>
-                        <input type="text" name="stuUserName" placeholder="Student User Name">
-                    </article>
+        <section class="forms">
+            <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
+                <article class="title">
+                    <h2>Add a New Student</h2>
+                </article>
+                <section>
+                    <section class="inputs">
+                        <article>
+                        <label for="stuId">ID</label>
+                        <input type="text" name="stuId" placeholder="Student ID">
+                        </article>
+                        <article>
+                            <label for="stuName">Name</label>
+                            <input type="text" name="stuName" placeholder="Student Name">
+                        </article>
+                        <article>
+                            <label for="stuAge">Age</label>
+                            <input type="text" name="stuAge" placeholder="Student Age">
+                        </article>
+                        <article>
+                            <label for="stuUserName">UserName</label>
+                            <input type="text" name="stuUserName" placeholder="Student User Name">
+                        </article>
+                    </section>
+                    <section class="inputs">
+                        <article>
+                            <label for="stuPassword">Password</label>
+                            <input type="text" name="stuPassword" placeholder="Student Password">
+                        </article>
+                        <article>
+                            <label for="stuCourse">Course</label>
+                            <input type="text" name="stuCourse" placeholder="Student Course">
+                        </article>
+                        <article>
+                            <label for="stuEmail">Email</label>
+                            <input type="email" name="stuEmail" placeholder="Student Email">
+                        </article>
+                        <article>
+                            <label for="stuCountry">Country</label>
+                            <input type="text" name="stuCountry" placeholder="Student Country">
+                        </article>
+                    </section>
                 </section>
-                <section class="inputs">
-                    <article>
-                        <label for="stuPassword">Password</label>
-                        <input type="text" name="stuPassword" placeholder="Student Password">
-                    </article>
-                    <article>
-                        <label for="stuCourse">Course</label>
-                        <input type="text" name="stuCourse" placeholder="Student Course">
-                    </article>
-                    <article>
-                        <label for="stuEmail">Email</label>
-                        <input type="email" name="stuEmail" placeholder="Student Email">
-                    </article>
-                    <article>
-                        <label for="stuCountry">Country</label>
-                        <input type="text" name="stuCountry" placeholder="Student Country">
-                    </article>
+                <section>
+                    <input type="submit" value="Create a new Student" class="btnSubmit">
                 </section>
+            </form>
+            <section class="form-contact">
+                <article class="title">
+                    <h2>Talk to a Student</h2>
+                </article>
+                <form>
+                    <aside>
+                        <label for="fname">Teacher Name</label>
+                        <input type="text" id="tname" name="teachername" placeholder="Your name">
+                    </aside>
+                    <aside>
+                        <label for="stuUserName">Student Username</label>
+                        <input type="text" id="stuUser" name="stuUser" placeholder="Username">
+                    </aside>
+                    <aside>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </aside>
+                    <input type="submit" value="Submit" class="btnContact">
+                </form>
             </section>
-            <section>
-                <input type="submit" value="Create a new Student" class="btnSubmit">
-            </section>
-        </form>
+        </section>
         ';
         return $newStudentForm;
     }
 
     public static function editStudentForm($currentUser){
         $newStudentForm = '
-        <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
-            <section>
-                <section class="inputs">
-                    <article>
-                    <label for="stuId">ID</label>
-                    <input type="text" name="stuId" placeholder="Student ID" value="'.$currentUser->getStudentId().'">
-                    </article>
-                    <article>
-                        <label for="stuName">Name</label>
-                        <input type="text" name="stuName" placeholder="Student Name"  value="'.$currentUser->getStudentName().'">
-                    </article>
-                    <article>
-                        <label for="stuAge">Age</label>
-                        <input type="text" name="stuAge" placeholder="Student Age" value="'.$currentUser->getStudentAge().'">
-                    </article>
-                    <article>
-                        <label for="stuUserName">UserName</label>
-                        <input type="text" name="stuUserName" placeholder="Student User Name" value="'.$currentUser->getStudentUserName().'">
-                    </article>
+        <section class="forms">
+            <form class="studentForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
+                <article class="title">
+                    <h2>Update a Student</h2>
+                </article>
+                <section>
+                    <section class="inputs">
+                        <article>
+                        <label for="stuId">ID</label>
+                        <input type="text" name="stuId" placeholder="Student ID" value="'.$currentUser->getStudentId().'">
+                        </article>
+                        <article>
+                            <label for="stuName">Name</label>
+                            <input type="text" name="stuName" placeholder="Student Name"  value="'.$currentUser->getStudentName().'">
+                        </article>
+                        <article>
+                            <label for="stuAge">Age</label>
+                            <input type="text" name="stuAge" placeholder="Student Age" value="'.$currentUser->getStudentAge().'">
+                        </article>
+                        <article>
+                            <label for="stuUserName">UserName</label>
+                            <input type="text" name="stuUserName" placeholder="Student User Name" value="'.$currentUser->getStudentUserName().'">
+                        </article>
+                    </section>
+                    <section class="inputs">
+                        <article>
+                            <label for="stuPassword">Password</label>
+                            <input type="password" name="stuPassword" placeholder="Student Password">
+                        </article>
+                        <article>
+                            <label for="stuCourse">Course</label>
+                            <input type="text" name="stuCourse" placeholder="Student Course" value="'.$currentUser->getStudentCourse().'">
+                        </article>
+                        <article>
+                            <label for="stuEmail">Email</label>
+                            <input type="email" name="stuEmail" placeholder="Student Email" value="'.$currentUser->getStudentEmail().'">
+                        </article>
+                        <article>
+                            <label for="stuCountry">Country</label>
+                            <input type="text" name="stuCountry" placeholder="Student Country" value="'.$currentUser->getStudentCountry().'">
+                        </article>
+                    </section>
                 </section>
-                <section class="inputs">
-                    <article>
-                        <label for="stuPassword">Password</label>
-                        <input type="password" name="stuPassword" placeholder="Student Password">
-                    </article>
-                    <article>
-                        <label for="stuCourse">Course</label>
-                        <input type="text" name="stuCourse" placeholder="Student Course" value="'.$currentUser->getStudentCourse().'">
-                    </article>
-                    <article>
-                        <label for="stuEmail">Email</label>
-                        <input type="email" name="stuEmail" placeholder="Student Email" value="'.$currentUser->getStudentEmail().'">
-                    </article>
-                    <article>
-                        <label for="stuCountry">Country</label>
-                        <input type="text" name="stuCountry" placeholder="Student Country" value="'.$currentUser->getStudentCountry().'">
-                    </article>
+                <input type="hidden" name="editForm" value="editStudent">
+                <section>
+                    <input type="submit" value="Update Student" class="btnSubmit">
                 </section>
-            </section>
-            <input type="hidden" name="editForm" value="editStudent">
-            <section>
-                <input type="submit" value="Update Student" class="btnSubmit">
-            </section>
-        </form>
+            </form>
+        </section>
         ';
         return $newStudentForm;
     }
@@ -169,30 +199,6 @@ class Page{
         ';
         return $message;
     }
-
-    public static function teacherContact(){
-        $teacherContact = '
-        <section class="teacher-contact">
-            <div class="form-contact">
-                <form action="POST">
-                    <label for="fname">Teacher Name</label>
-                    <input type="text" id="tname" name="teachername" placeholder="Your name">
-                
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Message" required></textarea>
-                
-                    <input type="submit" value="Submit" class="btnContact">
-                </form>
-            </div>
-        </section>
-        ';
-        return $teacherContact;
-    }
-
-
 
     public static function getPageFooter(){
         $pageFooter = '

@@ -7,10 +7,18 @@ require_once("inc/Utilities/StudentsRepository.class.php");
 require_once("inc/Entities/Students.class.php");
 require_once("inc/Entities/Teacher.class.php");
 require_once("inc/Utilities/DAO/StudentsDAO.class.php");
+require_once("inc/Utilities/DAO/LogHandlerDAO.php");
+require_once("inc/Utilities/DAO/TeacherDAO.class.php");
+require_once("inc/Utilities/Teacher_Page.php");
 require_once("inc/config.inc.php");
 
 // starting the database connection.
+session_start();
 StudentsDAO::startDb();
+LogHandlerDAO::checkteaLogin();
+TeacherDAO::init();
+
+$nowUser = $_SESSION['teacherUsername'];
 
 // creating the variables to get all students and a single students if necessary.
 $studentsList = StudentsDAO::getAllStudents();
