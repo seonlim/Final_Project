@@ -4,6 +4,7 @@ class Grades {
     private int $gradeId;
     private int $stuId;
     private int $courseId;
+    private int $term;
     private float $courseWork_1;
     private float $courseWork_2;
     private float $midTerm;
@@ -31,6 +32,14 @@ class Grades {
 
     public function setCourseId(int $courseId){
         $this->courseId = $courseId;
+    }
+
+    public function getTerm(){
+        return $this->term;
+    }
+
+    public function setTerm(int $term){
+        $this->term = $term;
     }
 
 

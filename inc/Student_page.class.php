@@ -123,6 +123,7 @@ class Student_Page{
             <table>
             <thead>
                 <tr>
+                    <th>Term</th>
                     <th>CourseWork 01</th>
                     <th>CourseWork 02</th>
                     <th>MidTerm</th>
@@ -152,6 +153,7 @@ class Student_Page{
     
         $gradesRow = '
             <tr>
+            <td>'.$grade->getTerm().' term </td>
                 <td>'.$grade->getCourseWork_1().'</td>
                 <td>'.$grade->getCourseWork_2().'</td>
                 <td>'.$grade->getMidTerm().'</td>
