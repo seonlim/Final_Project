@@ -187,6 +187,26 @@ class Page{
                     <input type="submit" value="Update Student" class="btnSubmit">
                 </section>
             </form>
+            <section class="form-contact">
+                <article class="title">
+                    <h2>Talk to a Student</h2>
+                </article>
+                <form>
+                    <aside>
+                        <label for="fname">Teacher Name</label>
+                        <input type="text" id="tname" name="teachername" placeholder="Your name">
+                    </aside>
+                    <aside>
+                        <label for="stuUserName">Student Username</label>
+                        <input type="text" id="stuUser" name="stuUser" placeholder="Username">
+                    </aside>
+                    <aside>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </aside>
+                    <input type="submit" value="Submit" class="btnContact">
+                </form>
+            </section>
         </section>
         ';
         return $newStudentForm;

@@ -18,6 +18,7 @@ main{
     column-gap: 7vh;
     width: 97%;
     justify-content: center;
+    padding-left: 3vh;
 }
 
 form,.form-contact{
