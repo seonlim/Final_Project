@@ -4,6 +4,7 @@ class Notice {
     private int $noticeId;
     private string $noticeTitle;
     private string $description;
+    private string $writeDate;
     private string $writer;
 
     public function getNoticeId(){
@@ -17,7 +18,7 @@ class Notice {
         return $this->noticeTitle;
     }
 
-    public function setNoticeTitle(stirng $noticeTitle){
+    public function setNoticeTitle(string $noticeTitle){
         $this->noticeTitle = $noticeTitle;
     }
 
@@ -29,6 +30,14 @@ class Notice {
         $this->description = $description;
     }
 
+    public function getWriteDate(){
+        return $this->writeDate;
+    }
+
+    public function setWriteDate(string $writeDate){
+        $this->writeDate = $writeDate;
+    }
+
     public function getWriter(){
         return $this->writer;
     }
@@ -36,7 +45,5 @@ class Notice {
     public function setWriter(string $writer){
         $this->writer = $writer;
     }
-
-    
 
 }

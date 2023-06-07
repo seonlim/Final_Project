@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- 생성 시간: 23-06-07 05:31
+-- 생성 시간: 23-06-07 20:14
 -- 서버 버전: 10.4.28-MariaDB
 -- PHP 버전: 8.2.4
 
@@ -56,11 +56,18 @@ CREATE TABLE `enrollment` (
 
 CREATE TABLE `notice` (
   `noticeId` int(11) NOT NULL,
-  `noticeeTitle` varchar(200) DEFAULT NULL,
+  `noticeTitle` varchar(200) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
-  `writeDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `writeDate` date NOT NULL DEFAULT current_timestamp(),
   `writer` char(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- 테이블의 덤프 데이터 `notice`
+--
+
+INSERT INTO `notice` (`noticeId`, `noticeTitle`, `description`, `writeDate`, `writer`) VALUES
+(2, 'Hello everyone', 'I wish you a great welcome.', '2023-06-07', 'Zelda Feldstein');
 
 -- --------------------------------------------------------
 
@@ -190,7 +197,7 @@ ALTER TABLE `enrollment`
 -- 테이블의 AUTO_INCREMENT `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `noticeId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `noticeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 테이블의 AUTO_INCREMENT `students`
