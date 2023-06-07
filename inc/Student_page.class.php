@@ -47,7 +47,7 @@ class Student_Page{
                     <section class="login-form">
                         <div class="buttons">
                             <p class="student">Student</p>
-                            <a class="teacher" href="teacher_page.php">Teacher</a>
+                            <a class="teacher" href="teacherLogin.php">Teacher</a>
                         </div>
                         <section class="student-login">
                             <article>

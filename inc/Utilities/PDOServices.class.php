@@ -92,7 +92,7 @@ class PDOServices  {
     }
 
     public function lastInsertedId() : int {
-        return $this->pdo->lastInsertedId();
+        return $this->pdo->lastInsertId();
     }
     
 }
