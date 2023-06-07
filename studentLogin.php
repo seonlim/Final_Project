@@ -4,6 +4,11 @@ require_once("inc/Entities/Students.class.php");
 require_once("inc/Utilities/PDOServices.class.php");
 require_once("inc/Utilities/DAO/StudentsDAO.class.php");
 require_once("inc/Student_page.class.php");
+require_once("inc/HomeHeader.class.php");
+require_once("inc/Footer.class.php");
+require_once("inc/Title.class.php");
+
+
 
 $errorMessage = '';
 
@@ -51,6 +56,9 @@ if (!empty($errorMessage)) {
 if (!empty($warningMessage)) {
     echo Student_Page::warningPopUp($warningMessage);
 }
+echo Title::htmlTitle("Home page");
+echo HomeHeader::homeBanner();
 echo Student_Page::studentLogin();
-echo Student_Page::studentFooter();
+// echo Student_Page::studentFooter();
+echo Footer::pageFooter();
 ?>

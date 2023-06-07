@@ -11,7 +11,9 @@ require_once("inc/Utilities/DAO/LogHandlerDAO.php");
 require_once("inc/Utilities/DAO/TeacherDAO.class.php");
 require_once("inc/Utilities/Teacher_Page.php");
 require_once("inc/config.inc.php");
-
+require_once("inc/HomeHeader.class.php");
+require_once("inc/Footer.class.php");
+require_once("inc/Title.class.php");
 
 
 $errorMessage = '';
@@ -61,7 +63,9 @@ if (!empty($warningMessage)) {
     echo Teacher_Page::warningPopUp($warningMessage);
 }
 
-
+echo Title::htmlTitle("Home page");
+echo HomeHeader::homeBanner();
 echo Teacher_Page::teacherLogin();
-echo Teacher_Page::teacherFooter();
+// echo Teacher_Page::teacherFooter();
+echo Footer::pageFooter();
 ?>

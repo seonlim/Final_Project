@@ -10,7 +10,7 @@
                         <img src="./img/logo.jpeg" alt="logo">
                     </article>
                     <section>
-                        <a href="#">
+                        <a href="studentLogin.php">
                             Login
                         </a>
                     </section>
