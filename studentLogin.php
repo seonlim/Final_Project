@@ -50,7 +50,7 @@ if (!empty($_POST)) {
 
 echo Student_Page::studentHead("studentLogin.css");
 echo Title::htmlTitle("Student Login");
-echo HomeHeader::homeBanner("","","");
+echo HomeHeader::homeBanner("","","<h5>Academic Wave</h5>");
 
 if (!empty($errorMessage)) {
     echo Student_Page::errorPopUp($errorMessage);

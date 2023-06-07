@@ -56,7 +56,7 @@ if (!empty($_POST)) {
 
 echo Teacher_Page::teacherHead();
 echo Title::htmlTitle("Teacher Login");
-echo HomeHeader::homeBanner("","","");
+echo HomeHeader::homeBanner("","","<h5>Academic Wave</h5>");
 
 if (!empty($errorMessage)) {
     echo Teacher_Page::errorPopUp($errorMessage);
