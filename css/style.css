@@ -21,6 +21,26 @@ main{
     padding-left: 3vh;
 }
 
+.setGradesMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.setGradesForm{
+    width: 50%;
+}
+
+.newGradesSection{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
 form,.form-contact{
     display: flex;
     flex-direction: column;
@@ -127,6 +147,7 @@ label{
 }
 
 input[type="text"],input[type="email"],
+input[type="number"],
 .form-contact textarea {
     width: 320px;
     padding: 10px;

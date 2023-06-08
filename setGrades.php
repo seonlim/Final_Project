@@ -1,6 +1,4 @@
 <?php
-
-
 require_once("inc/Utilities/Page.class.php");
 require_once("inc/Entities/Grades.class.php");
 require_once("inc/Utilities/PDOServices.class.php");
@@ -25,11 +23,19 @@ require_once("inc/Utilities/DAO/GradesDAO.class.php");
 
 session_start();
 GradesDAO::init();
+LogHandlerDAO::checkteaLogin();
+TeacherDAO::init();
+
+$nowUser = $_SESSION['teacherUsername'];
+
 
 $allGrades = GradesDAO::getAllStudentsGrades();
 // var_dump($allGrades);
 
 $gradesRepository = new GradesRepository();
+echo Page::getPageHead();
+// header 
+echo HomeHeader::homeBanner("<a href='index1.php'> HOME</a>". "</h5>","<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
 
 if( ! empty($_POST['gradesBTN'])){
     $newGrades = new Grades();
@@ -46,6 +52,10 @@ if( ! empty($_POST['gradesBTN'])){
 }else{
     echo Page::newGrades();
 }
+
+
+echo Page::getPageFooter();
+echo Footer::pageFooter();
 
 
 

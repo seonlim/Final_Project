@@ -214,9 +214,10 @@ class Page{
 
     public static function newGrades(){
         $newGrades = '
-            <form method="POST" action="'.$_SERVER["PHP_SELF"].'">
+            <main class="setGradesMain">
+            <form class="setGradesForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
             <section>
-                <section>
+                <section class="newGradesSection">
                     <article>
                     <label for="stuId">ID</label>
                     <input type="number" name="stuId" placeholder="Student ID">
@@ -237,8 +238,6 @@ class Page{
                         <label for="CourseWork_02">CourseWork 02</label>
                         <input type="text" name="CourseWork_02" placeholder="CourseWork 02">
                     </article>
-                </section>
-                <section>
                     <article>
                         <label for="MidTerm">MidTerm</label>
                         <input type="text" name="MidTerm" placeholder="MidTerm">
