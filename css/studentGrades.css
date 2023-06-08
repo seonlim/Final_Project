@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: unset;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+/* CSS for studentGrades */
+.studentGrades-Table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.studentGrades-Table th,
+.studentGrades-Table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.studentGrades-Table tr:hover{
+    background-color: whitesmoke;
+    font-weight: 600;
+}
+
+.studentGrades-Table th {
+    background-color: #5584AC;
+    color: ghostwhite;
+    text-align: center;
+}
+
+.studentGrades-Table td:first-child {
+    color: #5584AC;
+}
+
+

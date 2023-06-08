@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+
+main{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    column-gap: 7vh;
+    width: 97%;
+    justify-content: center;
+    padding-left: 3vh;
+}
+
+.setGradesMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.setGradesForm{
+    width: 50%;
+}
+
+.newGradesSection{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+form,.form-contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    /* border: px solid black; */
+}
+
+form > section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+/* input{
+    padding: 3%;
+    width: 320px;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid black;
+} */
+
+.btnSubmit,
+.btnContact{
+    width: 345px;
+    padding: 3%;
+    font-size: 14px;
+    border: 1px solid #5485AE;
+    background-color: #5485AE;
+    color: white;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.btnSubmit:hover,
+.btnContact:hover {
+    background-color: #5485AE;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+main a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+main a:hover{
+    background-color: black;
+    color: #5485AE;
+    cursor: pointer;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+table{
+    font-size: 13.5px;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+thead tr {
+    background-color: #5485AE;
+    color: white;
+    text-align: left;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid white;
+    transition: .2s;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: whitesmoke;
+}
+
+tbody tr:hover{
+    background-color: #96D2CD;
+}
+
+label{
+    color: #5584AC;
+    font-weight: 600;
+}
+
+input[type="text"],input[type="email"],
+input[type="number"],
+.form-contact textarea {
+    width: 320px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.title{
+    text-align: center;
+    
+}
+
+.studentForm h2 {
+    color: #22577E;
+}
