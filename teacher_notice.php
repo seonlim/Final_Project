@@ -30,7 +30,7 @@ $nowUser = $_SESSION['teacherUsername'];
 
 echo Page::getPageHead();
 
-echo HomeHeader::homeBanner("<h5>"."<a href='setGrades.php'>SET GRADES</a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>"."<a href='studentInfo.php'>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
+echo HomeHeader::homeBanner("<h5>"."<a href='setGrades.php'>SET GRADES</a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>"."<a href='index1.php'>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
 
 
 if (isset($_POST['noticeForm'])) {
