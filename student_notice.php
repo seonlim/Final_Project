@@ -32,9 +32,12 @@ StudentsDAO::init();
 $nowUser = $_SESSION['usernameStu'];
 
 echo Page::getPageHead();
+
 echo HomeHeader::homeBanner("<h5>"."<a href='studentGrades.php'> GRADES</a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>", "<h5>"."<a href='studentInfo.php'>" .$nowUser->getStudentUserName() ."</a>". "</h5>");
+
 echo Notice_Page::getPageHead();
 echo Notice_Page::noticeTable(NoticeDAO::getAllNotices());
+echo Page::getPageFooter();
 echo Footer::pageFooter();
-echo Notice_Page::getPageFooter();
+// echo Notice_Page::getPageFooter();
 ?>
