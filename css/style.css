@@ -121,6 +121,11 @@ tbody tr:hover{
     background-color: #96D2CD;
 }
 
+label{
+    color: #5584AC;
+    font-weight: 600;
+}
+
 input[type="text"],input[type="email"],
 .form-contact textarea {
     width: 320px;

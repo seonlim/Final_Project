@@ -212,6 +212,49 @@ class Page{
         return $newStudentForm;
     }
 
+    public static function newGrades(){
+        $newGrades = '
+            <form method="POST" action="'.$_SERVER["PHP_SELF"].'">
+            <section>
+                <section>
+                    <article>
+                    <label for="stuId">ID</label>
+                    <input type="number" name="stuId" placeholder="Student ID">
+                    </article>
+                    <article>
+                    <label for="courseId">Course ID</label>
+                    <input type="number" name="courseId" placeholder="Course ID">
+                    </article>
+                    <article>
+                        <label for="term">Term</label>
+                        <input type="number" name="term" placeholder="Term">
+                    </article>
+                    <article>
+                        <label for="CourseWork_01">CourseWork 01</label>
+                        <input type="text" name="CourseWork_01" placeholder="CourseWork 01">
+                    </article>
+                    <article>
+                        <label for="CourseWork_02">CourseWork 02</label>
+                        <input type="text" name="CourseWork_02" placeholder="CourseWork 02">
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <label for="MidTerm">MidTerm</label>
+                        <input type="text" name="MidTerm" placeholder="MidTerm">
+                    </article>
+                    <article>
+                        <label for="Final_Exam">Final Exam</label>
+                        <input type="text" name="Final_Exam" placeholder="Final Exam">
+                    </article>
+                </section>
+            </section>
+            <input type="submit" value="Submit" class="btnContact" name="gradesBTN">
+            </form>
+        ';
+        return $newGrades;
+    }
+
     public static function successMessage() {
         $message = '
         <section class="message" role="alert">
