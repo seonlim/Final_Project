@@ -24,7 +24,7 @@ $nowUser = $_SESSION['usernameStu'];
 echo Student_Page::studentHead("studentPage.css");
 
 echo Title::htmlTitle("Student Information");
-echo HomeHeader::homeBanner("<h5>"."<a href='studentGrades.php'> GRADES</a>". "</h5>","<h5>"."<a href='#'> NOTICE </a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>");
+echo HomeHeader::homeBanner("<h5>"."<a href='studentGrades.php'> GRADES</a>". "</h5>","<h5>"."<a href='student_notice.php'> NOTICE </a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>");
 
 echo '<h1>Welcome '.$nowUser->getStudentName().' !'.'</h1>';
 echo Student_Page::studentInfo($nowUser);

@@ -4,7 +4,7 @@ class NoticeDAO {
     private static $db;
 
     public static function startDb(){
-        self::$db = new PDOService("notice");
+        self::$db = new PDOServices("notice");
     }
     
     public static function insertNotice(Notice $newNotice){
@@ -26,7 +26,7 @@ class NoticeDAO {
         $sql = "SELECT * FROM notice";
         self::$db->query($sql);
         self::$db->execute();
-        return self::$db->resultSet();
+        return self::$db->getResultSet();
 
 
     }

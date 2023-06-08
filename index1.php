@@ -76,7 +76,7 @@ $studentsRepository->setStudentsList($studentsList);
 echo Page::getPageHead();
 
 // header 
-echo HomeHeader::homeBanner("<a href='setGrades.php'> SET GRADES</a>". "</h5>","<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
+echo HomeHeader::homeBanner("<h5>"."<a href='setGrades.php'>SET GRADES</a>". "</h5>","<h5>"."<a href='teacher_notice.php'> NOTICE </a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>");
 
 echo Page::stuTable(StudentsDAO::getAllStudents());
 if (isset($currentUser)) {

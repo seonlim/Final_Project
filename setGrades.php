@@ -34,8 +34,10 @@ $allGrades = GradesDAO::getAllStudentsGrades();
 
 $gradesRepository = new GradesRepository();
 echo Page::getPageHead();
+
 // header 
-echo HomeHeader::homeBanner("<a href='index1.php'> HOME</a>". "</h5>","<a href='logout.php'> LOGOUT</a>". "</h5>","<h5>" .$nowUser->getTeacherUserName() ."</a>". "</h5>");
+echo HomeHeader::homeBanner("<h5>"."<a href='index1.php'>HOME</a>". "</h5>","<h5>"."<a href='teacher_notice.php'> NOTICE </a>". "</h5>","<h5>"."<a href='logout.php'> LOGOUT</a>". "</h5>");
+
 
 if( ! empty($_POST['gradesBTN'])){
     $newGrades = new Grades();
