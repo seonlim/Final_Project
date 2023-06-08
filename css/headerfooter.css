@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+small {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* COMMON HEADER */
+header {
+  background-color: #22577E;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.homeHeader,
+.userHeader {
+  height: 90%;
+  width: 90%;
+  row-gap: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeHeader > a {
+  display: flex;
+  align-items: center;
+}
+
+.homeHeader a,
+.userHeader a {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.homeHeader h5 {
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.homeHeader a:hover,
+.userHeader a:hover {
+  color: black;
+}
+
+.homeHeader > #headerLogo,
+.userHeader > #headerLogo {
+  width: 20vh;
+  height: 20vh;
+}
+
+img {
+  width: 100%;
+}
+
+/* USER HEADER */
+.userHeader {
+  justify-content: space-between;
+}
+
+.userHeader ul {
+  display: flex;
+  color: whitesmoke;
+  column-gap: 5vh;
+  width: 80%;
+}
+
+/* FOOTER */
+footer {
+  background-color: #22577E;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3vh;
+}
+
+footer > p,
+footer > a {
+  color: whitesmoke;
+}
