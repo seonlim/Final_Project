@@ -45,11 +45,12 @@ main {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 90%;
     padding-left: 5vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    height: 80vh;
 }
 
 form{
