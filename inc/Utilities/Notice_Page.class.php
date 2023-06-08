@@ -1,7 +1,7 @@
 <?php
 
 
-class Page{
+class Notice_Page{
     public static function getPageHead(){
         $pageHead = '
         <!DOCTYPE html>

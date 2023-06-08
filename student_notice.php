@@ -8,7 +8,7 @@ require_once("inc/Utilities/Notice_Page.class.php");
 
 NoticeDAO::startDb();
 
-echo Page::getPageHead();
-echo Page::noticeTable(NoticeDAO::getAllNotices());
-echo Page::getPageFooter();
+echo Notice_Page::getPageHead();
+echo Notice_Page::noticeTable(NoticeDAO::getAllNotices());
+echo Notice_Page::getPageFooter();
 ?>

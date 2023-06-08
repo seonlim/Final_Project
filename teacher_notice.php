@@ -23,8 +23,8 @@ if (isset($_POST['noticeForm'])) {
 
 
 
-echo Page::getPageHead();
-echo Page::noticeTable(NoticeDAO::getAllNotices());
-echo Page::newNoticeForm();
-echo Page::getPageFooter();
+echo Notice_Page::getPageHead();
+echo Notice_Page::noticeTable(NoticeDAO::getAllNotices());
+echo Notice_Page::newNoticeForm();
+echo Notice_Page::getPageFooter();
 ?>
