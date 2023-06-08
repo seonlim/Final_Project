@@ -69,10 +69,6 @@ class Notice_Page{
                             <label for="description">Description</label>
                             <input type="text" name="description" placeholder="Description">
                         </article>
-                        <article>
-                            <label for="writer">Writer</label>
-                            <input type="text" name="writer" placeholder="Writer">
-                        </article>
                     </section>
                 </section>
                 <section>

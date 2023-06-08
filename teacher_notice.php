@@ -38,7 +38,7 @@ if (isset($_POST['noticeForm'])) {
     $newNotice->setNoticeTitle($_POST['noticeTitle']);
     $newNotice->setDescription($_POST['description']);
     $newNotice->setWriteDate(date('Y-m-d'));
-    $newNotice->setWriter($_POST['writer']);
+    $newNotice->setWriter($nowUser->getTeacherUserName());
 
     NoticeDAO::insertNotice($newNotice);
     // var_dump(NoticeDAO::getAllNotices());
