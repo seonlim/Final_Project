@@ -6,3 +6,120 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+a {
+    text-decoration: none;
+}
+
+small {
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    font-size: 18px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    width: 90%;
+}
+
+input{
+    padding: 2%;
+}
+
+h2 {
+    padding-top: 5vh;
+    color:lightslategrey ;
+    width: 90%;
+}
+
+
+
+/* notice-table */
+.notice-table table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notice-table tbody {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    width: 100%;
+}
+
+.notice-table tr {
+    display: flex;
+    width: 100%;
+}
+
+.notice-table td {
+    padding: 2vh;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: lightslategrey;
+    width: 25%;
+}
+
+
+.notice-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.notice-inputs article {
+    display: flex;
+    flex-direction: column;
+    column-gap: 3vh;
+    row-gap: 1vh;
+}
+
+.notice-table,
+.notice-add {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.btnNotice {
+    width: 30vh;
+    padding: 2%;
+}
