@@ -11,6 +11,7 @@ class Notice_Page{
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Notice Page</title>
+            <link rel="stylesheet" href="./css/notice.css">
         </head>
         <body>
         ';
@@ -19,23 +20,22 @@ class Notice_Page{
 
     public static function noticeTable($noticeList){
         $noticeTable = '
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Date</th>
-                    <th>Writer</th>
-                </tr>
-            </thead>
-            <tbody>
-            ';
-            foreach($noticeList as $notice){
-                $noticeTable .= self::noticeRow($notice);
-            }
-            $noticeTable .= '
-            </tbody>
-        </table>
+        <main>
+        <section class="notice-section">
+            <section class="notice-table">
+                <article class="notice-title">
+                    <h2>Notice</h2>
+                </article>
+                <table>
+                    <tbody>
+                    ';
+                    foreach($noticeList as $notice){
+                        $noticeTable .= self::noticeRow($notice);
+                    }
+                    $noticeTable .= '
+                    </tbody>
+                </table>
+            </section>
         ';
         return $noticeTable;
     }
@@ -54,13 +54,13 @@ class Notice_Page{
 
     public static function newNoticeForm(){
         $newNoticeForm = '
-        <section class="noticeSection">
+        <section class="notice-add">
+            <article class="notice-title">
+                <h2>Add a New Notice</h2>
+            </article>
             <form class="newNoticeForm" method="POST" action="'.$_SERVER["PHP_SELF"].'">
-                <article class="title">
-                    <h2>Add a New Notice</h2>
-                </article>
                 <section>
-                    <section class="inputs">
+                    <section class="notice-inputs">
                         <article>
                             <label for="noticeTitle">Title</label>
                             <input type="text" name="noticeTitle" placeholder="Title">
@@ -80,6 +80,8 @@ class Notice_Page{
                 </section>
             </form>
         </section>
+    </section>
+    </main>
         ';
         return $newNoticeForm;
     } 
